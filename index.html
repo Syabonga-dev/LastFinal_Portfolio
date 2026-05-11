@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
+<title>Syabonga Njabulo Duma — Developer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<link rel="stylesheet" href="styles.css">
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"> </script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "jF5xUNWosX3VkYD9h",
+      });
+   })();
+</script>
+
+<script src="script.js"></script>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#hero">Software Development Student<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+    <span id="themeText" class="theme-text">Dark Mode</span>
+    <button class="theme-btn" id="themeToggle" aria-label="Toggle theme"></button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    
+    <div class="hero-text">
+      <p class="hero-greeting">Hello, World!</p>
+      <h1 class="hero-name">I'm Syabonga<br>Njabulo Duma</h1>
+      <p class="hero-role">Software Developer</p>
+      <p class="hero-sub">Final Year IT Student · Nelson Mandela University</p>
+
+      <p class="hero-location">
+        <i class="fas fa-map-marker-alt"></i>
+        Eastern Cape, Port Elizabeth, South Africa
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">
+          <i class="fas fa-code"></i> View My Work
+        </a>
+        <a class="btn btn-outline" href="#contact">
+          <i class="fas fa-envelope"></i> Hire Me
+        </a>
+        <a class="btn btn-outline" href="curriculum vitae.pdf" download>
+          <i class="fas fa-download"></i> Download CV
+        </a>
+      </div>
+
+      <div class="hero-social">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <!-- SIMPLE BACKGROUND IMAGE BLOCK -->
+    <div class="hero-image"></div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="sec">
+    <div class="reveal">
+      <p class="sec-tag">About Me</p>
+      <h2 class="sec-title">Who Am I?</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I'm a final year Diploma in Information Technology (Software Development) student at Nelson Mandela University, passionate about building practical software that solves real-world problems.</p>
+        <p>Over the course of my studies I've built three full systems from the ground up — CivicAlert, a Case Management System, and PhilaLink — applying my skills across the full stack using C#, .NET, React, Python, and more.</p>
+        <p>I'm deeply interested in cybersecurity, networking, and clean architecture. I hold two Cisco certifications and love turning complex problems into elegant, functional solutions.</p>
+      </div>
+      <div class="info-box reveal">
+        <div class="info-row"><span class="lbl">Name</span><span class="val">Syabonga Njabulo Duma</span></div>
+        <div class="info-row"><span class="lbl">Location</span><span class="val">Port Elizabeth, Eastern Cape</span></div>
+        <div class="info-row"><span class="lbl">Status</span><span class="val">Open to opportunities</span></div>
+        <div class="info-row"><span class="lbl">Education</span><span class="val">Diploma IT - Software Dev</span></div>
+        <div class="info-row"><span class="lbl">Institute</span><span class="val">Nelson Mandela University</span></div>
+        <div class="info-row"><span class="lbl">Duration</span><span class="val">Feb 2024 - Nov 2026 (Expected)</span></div>
+        <div class="info-row"><span class="lbl">Experience</span><span class="val">Student Projects</span></div>
+        <div class="info-row"><span class="lbl">Languages</span><span class="val">English · Zulu · Xhosa</span></div>
+        <div class="info-row"><span class="lbl">Email</span><span class="val"><a href="mailto:njabulod189@gmail.com">njabulod189@gmail.com</a></span></div>
+        <div class="info-row"><span class="lbl">Phone</span><span class="val">+27 72 434 7162</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" style="background:var(--bg);">
+  <div class="sec">
+    <div class="reveal">
+      <p class="sec-tag">Portfolio</p>
+      <h2 class="sec-title">Projects I've Built</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="proj-grid">
+      <div class="proj-card reveal">
+        <span class="proj-num"> - 001</span>
+        <h3 class="proj-title">CivicAlert</h3>
+        <p class="proj-desc">A community civic alert platform enabling citizens to report and track local issues. Features real-time notifications via SignalR, Google Maps integration, and Open Weather API data to assist municipal response.</p>
+        <div class="tags">
+          <span class="tag">C# / .NET</span><span class="tag">ASP.NET MVC</span><span class="tag">SignalR</span><span class="tag">Google Maps API</span><span class="tag">Open Weather API</span><span class="tag">SQL Server</span>
+        </div>
+        <a class="proj-link" href="https: github.com/Syabonga-dev" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+      <div class="proj-card reveal">
+        <span class="proj-num"> - 002</span>
+        <h3 class="proj-title">Case Management System</h3>
+        <p class="proj-desc">A full-stack case management system for tracking, assigning, and resolving cases. Built on 3-tier architecture with role-based access control and a structured MVC pattern using Entity Framework Core.</p>
+        <div class="tags">
+          <span class="tag">C# / .NET Framework</span><span class="tag">MVC</span><span class="tag">Entity Framework Core</span><span class="tag">SQL Server</span><span class="tag">Bootstrap</span><span class="tag">jQuery</span>
+        </div>
+        <a class="proj-link" href="https: -github.com/Syabonga-dev" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+      <div class="proj-card reveal">
+        <span class="proj-num"> - 003</span>
+        <h3 class="proj-title">PhilaLink</h3>
+        <p class="proj-desc">A healthcare-connectivity platform linking patients with community health workers and services. Features a React front-end, ASP.NET Web API backend, Node.js integration, and Python data services.</p>
+        <div class="tags">
+          <span class="tag">React</span><span class="tag">ASP.NET Web API</span><span class="tag">Node.js</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">CSS</span>
+        </div>
+        <a class="proj-link" href="https: -github.com/Syabonga-dev" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="sec">
+    <div class="reveal">
+      <p class="sec-tag">Expertise</p>
+      <h2 class="sec-title">Skills &amp; Technologies</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="sk-group reveal">
+        <p class="sk-title"><i class="fas fa-code"></i> Languages</p>
+        <div class="sk-chips">
+          <span class="chip hi">C#</span><span class="chip hi">Python</span><span class="chip hi">JavaScript</span><span class="chip">HTML5</span><span class="chip">CSS</span><span class="chip">SQL</span><span class="chip">JSON</span><span class="chip">jQuery</span>
+        </div>
+      </div>
+      <div class="sk-group reveal">
+        <p class="sk-title"><i class="fas fa-layer-group"></i> Frameworks</p>
+        <div class="sk-chips">
+          <span class="chip hi">.NET Framework</span><span class="chip hi">ASP.NET MVC</span><span class="chip hi">ASP.NET Web API</span><span class="chip hi">React.js</span><span class="chip">Node.js</span><span class="chip">Bootstrap</span><span class="chip">Entity Framework Core</span><span class="chip">SignalR</span>
+        </div>
+      </div>
+      <div class="sk-group reveal">
+        <p class="sk-title"><i class="fas fa-sitemap"></i> Architecture &amp; APIs</p>
+        <div class="sk-chips">
+          <span class="chip hi">3-Tier Architecture</span><span class="chip hi">MVC Pattern</span><span class="chip hi">OOP</span><span class="chip">Google Maps API</span><span class="chip">Open Weather API</span><span class="chip">REST APIs</span>
+        </div>
+      </div>
+      <div class="sk-group reveal">
+        <p class="sk-title"><i class="fas fa-database"></i> Databases &amp; Tools</p>
+        <div class="sk-chips">
+          <span class="chip hi">SQL Server</span><span class="chip">Microsoft Access</span><span class="chip">MS Excel</span><span class="chip">Microsoft Word</span><span class="chip">PowerPoint</span><span class="chip">Microsoft Office</span>
+        </div>
+      </div>
+      <div class="sk-group reveal">
+        <p class="sk-title"><i class="fas fa-shield-alt"></i> Cybersecurity &amp; Networking</p>
+        <div class="sk-chips">
+          <span class="chip hi">Cybersecurity</span><span class="chip">Threat Detection</span><span class="chip">Cyber Best Practices</span><span class="chip">Network Security</span><span class="chip">Network Vulnerabilities</span><span class="chip">IPv4 / IPv6</span><span class="chip">IP Subnetting</span><span class="chip">Packet Switching</span><span class="chip">Ethernet</span><span class="chip">IP Connectivity</span>
+        </div>
+      </div>
+      <div class="sk-group reveal">
+        <p class="sk-title"><i class="fas fa-users"></i> Soft Skills</p>
+        <div class="sk-chips">
+          <span class="chip">Teamwork</span><span class="chip">Communication</span><span class="chip">Presentations</span><span class="chip">Strategy</span><span class="chip">English</span><span class="chip">Zulu</span><span class="chip">Xhosa</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" style="background:var(--bg2);">
+  <div class="sec">
+    <div class="reveal">
+      <p class="sec-tag">Credentials</p>
+      <h2 class="sec-title">Certifications</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="certs-grid">
+
+      <div class="cert-card reveal">
+        <div class="cert-img">
+          <img src="networks.png" alt="an image of my networks certificate">
+        </div>
+        <div class="cert-body">
+          <p class="cert-issuer"><i class="fas fa-award"></i> Cisco Networking Academy</p>
+          <h3 class="cert-name">CCNA: Introduction to Networks</h3>
+          <p class="cert-date">Issued May 2025</p>
+          <p class="cert-id">ID: edeec0f9-6276-41de-af9a-3a6d23db2e3f</p>
+          <div class="tags" style="margin-bottom:.8rem;">
+            <span class="tag">Ethernet</span><span class="tag">IP Connectivity</span><span class="tag">IPv4/IPv6</span><span class="tag">IP Subnetting</span><span class="tag">Network Security</span><span class="tag">Packet Switching</span>
+          </div>
+          <a class="cert-cred" href="https: -www.credly.com/badges/edeec0f9-6276-41de-af9a-3a6d23db2e3f/public_url" target="_blank"><i class="fas fa-external-link-alt"></i> Show Credential</a>
+        </div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-img">
+          <img src="cybersecurity.png" alt="an image of a cybersecurity certificate">
+          <i class="fas fa-certificate"></i>
+        </div>
+        <div class="cert-body">
+          <p class="cert-issuer"><i class="fas fa-award"></i> Cisco Networking Academy</p>
+          <h3 class="cert-name">Introduction to Cybersecurity</h3>
+          <p class="cert-date">Issued Apr 2024</p>
+          <p class="cert-id">ID: 1059461122</p>
+          <div class="tags" style="margin-bottom:.8rem;">
+            <span class="tag">Cybersecurity</span><span class="tag">Cyber Best Practices</span><span class="tag">Threat Detection</span><span class="tag">Network Vulnerabilities</span><span class="tag">Privacy &amp; Data</span>
+          </div>
+          <a class="cert-cred" href="https: -www.credly.com/badges/92e08d8e-4b59-4ea3-953d-b554a284fdd5/public_url" target="_blank"><i class="fas fa-external-link-alt"></i> Show Credential</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ACADEMIC JOURNEY -->
+<section id="education" style="background:var(--bg2);">
+  <div class="sec">
+    <div class="reveal">
+      <p class="sec-tag">Academic History</p>
+      <h2 class="sec-title">University Journey</h2>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="timeline">
+      
+      <!-- 2024: First Year -->
+      <div class="year-block reveal">
+        <div class="year-header">
+          <h3>First Year (2024)</h3>
+          <span class="status-pill complete">Complete</span>
+        </div>
+        <div class="edu-content-grid">
+          <div class="edu-table-container">
+            <table class="edu-table">
+              <thead>
+                <tr><th>Module</th><th>Mark</th><th>Result</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Systems Software I: IT Essentials</td><td>81%</td><td class="dist">Pass with Distinction</td></tr>
+                <tr><td>IT Skills I</td><td>80%</td><td class="dist">Pass with Distinction</td></tr>
+                <tr><td>Development Software I</td><td>78%</td><td class="dist">Pass with Distinction</td></tr>
+                <tr><td>Systems Software I: Networks</td><td>86%</td><td class="dist">Pass with Distinction</td></tr>
+                <tr><td>Information Systems 1A</td><td>75%</td><td class="dist">Pass with Distinction</td></tr>
+                <tr><td>Information Systems 1B</td><td>71%</td><td>Pass</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="edu-image-box">
+            <img src="First Year (1st).png" alt="First Year Academic Record" class="viewable-img">
+            <p class="img-hint">Click to enlarge</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2025: Second Year -->
+      <div class="year-block reveal">
+        <div class="year-header">
+          <h3>Second Year (2025)</h3>
+          <span class="status-pill complete">Complete</span>
+        </div>
+        <div class="edu-content-grid">
+          <div class="edu-table-container">
+            <table class="edu-table">
+              <thead>
+                <tr><th>Module</th><th>Mark</th><th>Result</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Internet Programming II</td><td>89%</td><td class="dist">Pass with Distinction</td></tr>
+                <tr><td>Development Software II</td><td>92%</td><td class="dist">Pass with Distinction</td></tr>
+                <tr><td>Technical Programming I</td><td>64%</td><td>Pass</td></tr>
+                <tr><td>Information Systems II</td><td>68%</td><td>Pass</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="edu-image-box">
+            <img src="Second Year  (2nd).jpg" alt="Second Year Academic Record" class="viewable-img">
+            <p class="img-hint">Click to enlarge</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2026: Final Year -->
+      <div class="year-block reveal">
+        <div class="year-header">
+          <h3>Final Year (2026)</h3>
+          <span class="status-pill progress">In-Progress</span>
+        </div>
+        <table class="edu-table">
+          <thead>
+            <tr><th>Module</th><th>Mark</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Information Systems III: Advanced Design</td><td>--</td><td>In-Progress</td></tr>
+            <tr><td>Development Software III: Project</td><td>--</td><td>In-Progress</td></tr>
+            <tr><td>Technical Programming II</td><td>--</td><td>In-Progress</td></tr>
+            <tr><td>Support Services II</td><td>--</td><td>In-Progress</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Modal for Image Viewing (Remains the same) -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="imgFull">
+</div>
+
+
+<!-- CONTACT -->
+<section id="contact" style="background:var(--bg);">
+  <div class="sec">
+    <div class="reveal">
+      <p class="sec-tag">Get In Touch</p>
+      <h2 class="sec-title">Let's Connect</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="c-items reveal">
+        <div class="c-item">
+          <div class="c-icon"><i class="fas fa-envelope"></i></div>
+          <div><p class="c-lbl">Email</p><p class="c-val"><a href="mailto:njabulod189@gmail.com">njabulod189@gmail.com</a></p></div>
+        </div>
+        <div class="c-item">
+          <div class="c-icon"><i class="fas fa-phone"></i></div>
+          <div><p class="c-lbl">Phone</p><p class="c-val"><a href="tel:+27724347162">+27 72 434 7162</a></p></div>
+        </div>
+        <div class="c-item">
+          <div class="c-icon"><i class="fab fa-linkedin-in"></i></div>
+          <div><p class="c-lbl">LinkedIn</p><p class="c-val"><a href="https: -www.linkedin.com/in/syabonga-njabulo-duma-398756329" target="_blank">Syabonga Njabulo Duma</a></p></div>
+        </div>
+        <div class="c-item">
+          <div class="c-icon"><i class="fab fa-github"></i></div>
+          <div><p class="c-lbl">GitHub</p><p class="c-val"><a href="https: -github.com/Syabonga-dev" target="_blank">Syabonga-dev</a></p></div>
+        </div>
+        <div class="c-item">
+          <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div><p class="c-lbl">Location</p><p class="c-val">Port Elizabeth, Eastern Cape, ZA</p></div>
+        </div>
+        <a class="btn btn-primary" href="curriculum vitae.pdf" download style="align-self:flex-start;margin-top:.25rem;"><i class="fas fa-download" ></i> Download CV</a>
+      </div>
+      <form class="cf reveal" onsubmit="return false;">
+        <div class="cf-row">
+          <div class="cf-field"><label class="cf-lbl" for="cn" >Name</label><input class="cf-input" type="text" id="cn" placeholder="Your name"/></div>
+          <div class="cf-field"><label class="cf-lbl" for="ce" >Email</label><input class="cf-input" type="email" id="ce" placeholder="your@email.com"/></div>
+        </div>
+        <div class="cf-field"><label class="cf-lbl" for="cs" >Subject</label><input class="cf-input" type="text" id="cs" placeholder="What's this about?"/></div>
+        <div class="cf-field"><label class="cf-lbl" for="cm" >Message</label><textarea class="cf-ta" id="cm" placeholder="Tell me about the opportunity..."></textarea></div>
+        <button class="btn btn-primary" type="submit" style="align-self:flex-start;" onclick="sendmail()"><i class="fas fa-paper-plane"></i> Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="f-copy">© 2025 Syabonga Njabulo Duma · Built with HTML &amp; CSS</span>
+  <div class="f-links">
+    <a href="https: -github.com/Syabonga-dev" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https: -www.linkedin.com/in/syabonga-njabulo-duma-398756329" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+    <a href="#hero"><i class="fas fa-arrow-up"></i> Back to top</a>
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('themeToggle');
+const html = document.documentElement;
+const themeText = document.getElementById('themeText');
+
+// load saved theme
+const savedTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', savedTheme);
+
+updateThemeText(savedTheme);
+
+// toggle theme
+btn.addEventListener('click', () => {
+  const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+
+  updateThemeText(next);
+});
+
+// update label text
+function updateThemeText(theme) {
+  themeText.textContent = theme === 'light' ? 'Dark Mode' : 'Light Mode';
+}
+  const obs = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+    { threshold: 0.1 }
+  );
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("imgFull");
+const span = document.getElementsByClassName("close")[0];
+
+// Select all images with the viewable-img class
+document.querySelectorAll('.viewable-img').forEach(image => {
+  image.onclick = function() {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
+});
+
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+</script>
+</body>
+</html>

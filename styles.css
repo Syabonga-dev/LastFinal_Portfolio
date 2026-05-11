@@ -1,0 +1,445 @@
+:root {
+  --bg:#e8f0fe;--bg2:#ffffff;--bg3:#f0f4ff;
+  --nav-bg:rgba(232,240,254,0.92);
+  --ink:#1a1a2e;--ink2:#444466;--ink3:#888899;
+  --accent:#3a6cf4;--accent2:#2451d1;--accent-light:#dce8ff;
+  --border:rgba(58,108,244,0.15);
+  --card:#ffffff;
+  --shadow:0 4px 24px rgba(58,108,244,0.10);
+  --shadow2:0 8px 32px rgba(58,108,244,0.18);
+  --tag-bg:#e8f0fe;--tag-color:#2451d1;
+}
+[data-theme="dark"] {
+  --bg:#0d0f1e;--bg2:#13162a;--bg3:#181b30;
+  --nav-bg:rgba(13,15,30,0.94);
+  --ink:#e8eaf6;--ink2:#b0b8d8;--ink3:#6b7299;
+  --accent:#5b87ff;--accent2:#7aa0ff;--accent-light:#1a2340;
+  --border:rgba(91,135,255,0.18);
+  --card:#181b30;
+  --shadow:0 4px 24px rgba(0,0,0,0.4);
+  --shadow2:0 8px 32px rgba(0,0,0,0.5);
+  --tag-bg:#1a2340;--tag-color:#7aa0ff;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Poppins',sans-serif;
+    font-size:15px;line-height:1.7;
+    transition:background .3s,color .3s;}
+::-webkit-scrollbar{
+    width:5px;
+}
+::-webkit-scrollbar-track{
+    background:var(--bg);
+}
+::-webkit-scrollbar-thumb{
+    background:var(--accent);
+    border-radius:3px;
+}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:.85rem 5%;display:flex;justify-content:space-between;align-items:center;background:var(--nav-bg);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:background .3s;}
+.nav-logo{font-family:'Fira Code',monospace;font-size:1.1rem;font-weight:700;color:var(--accent);text-decoration:none;}
+.nav-logo span{color:var(--ink);}
+.nav-links{display:flex;gap:1.75rem;list-style:none;align-items:center;}
+.nav-links a{font-size:13px;font-weight:500;color:var(--ink2);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:var(--accent);}
+.theme-btn{background:var(--accent-light);border:1px solid var(--border);border-radius:50px;width:50px;height:26px;cursor:pointer;position:relative;transition:background .3s;flex-shrink:0;}
+.theme-btn::after{content:'';position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:var(--accent);transition:transform .3s;}
+[data-theme="dark"] .theme-btn::after{transform:translateX(22px);}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;padding:0 5%;padding-top:72px;position:relative;overflow:hidden;}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;width:100%;max-width:1200px;margin:0 auto;}
+.hero-greeting{font-family:'Fira Code',monospace;font-size:13px;color:var(--ink3);letter-spacing:.08em;margin-bottom:.4rem;}
+.hero-name{font-size:clamp(2rem,4.5vw,3.1rem);font-weight:700;line-height:1.12;color:var(--ink);margin-bottom:.45rem;}
+.hero-role{font-size:1.05rem;font-weight:600;color:var(--accent);margin-bottom:.2rem;}
+.hero-sub{font-family:'Fira Code',monospace;font-size:.75rem;color:var(--ink3);margin-bottom:.3rem;}
+.hero-location{font-size:.82rem;color:var(--ink3);display:flex;align-items:center;gap:.4rem;margin-bottom:1.5rem;}
+.hero-actions{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;}
+.btn{display:inline-flex;align-items:center;gap:.45rem;padding:.6rem 1.35rem;border-radius:8px;font-size:13px;font-weight:600;letter-spacing:.01em;text-decoration:none;transition:all .2s;cursor:pointer;border:none;font-family:'Poppins',sans-serif;}
+.btn-primary{background:var(--accent);color:#fff;}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:var(--shadow2);}
+.btn-outline{background:transparent;color:var(--accent);border:1.5px solid var(--accent);}
+.btn-outline:hover{background:var(--accent-light);transform:translateY(-2px);}
+.hero-social{display:flex;gap:.65rem;margin-top:1.4rem;}
+.hero-social a{width:36px;height:36px;border-radius:50%;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--ink2);font-size:14px;text-decoration:none;transition:all .2s;box-shadow:var(--shadow);}
+.hero-social a:hover{background:var(--accent);color:#fff;border-color:var(--accent);transform:translateY(-2px);}
+.hero-img-wrap{display:flex;justify-content:center;align-items:center;}
+.hero-photo{width:320px;height:380px;border-radius:30% 70% 70% 30%/30% 30% 70% 70%;background:linear-gradient(135deg,var(--accent-light),var(--accent));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;box-shadow:var(--shadow2);border:3px solid rgba(255,255,255,0.15);overflow:hidden;position:relative;}
+.hero-photo i{font-size:5rem;color:rgba(255,255,255,0.5);}
+.hero-photo span{font-size:11px;font-family:'Fira Code',monospace;color:rgba(255,255,255,0.65);text-align:center;padding:0 1.5rem;}
+.hero-photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
+.bg-text{position:absolute;right:-1rem;bottom:1rem;font-size:7rem;font-weight:900;color:rgba(58,108,244,0.04);line-height:1;pointer-events:none;user-select:none;letter-spacing:-.05em;}
+
+/* SECTIONS */
+section{padding:5rem 5%;}
+.sec{max-width:1200px;margin:0 auto;}
+.sec-tag{font-family:'Fira Code',monospace;font-size:11px;font-weight:500;color:var(--accent);letter-spacing:.15em;text-transform:uppercase;display:flex;align-items:center;gap:.6rem;margin-bottom:.6rem;}
+.sec-tag::before{content:' -';opacity:.5;}
+.sec-title{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:700;color:var(--ink);line-height:1.2;}
+.sec-line{width:44px;height:3px;background:var(--accent);border-radius:2px;margin-top:.65rem;margin-bottom:2.5rem;}
+
+/* ABOUT */
+#about{background:var(--bg2);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.about-text p{color:var(--ink2);font-size:.92rem;margin-bottom:.9rem;line-height:1.85;}
+.info-box{background:var(--bg3);border-radius:16px;overflow:hidden;border:1px solid var(--border);}
+.info-row{display:flex;justify-content:space-between;align-items:flex-start;padding:.8rem 1.2rem;border-bottom:1px solid var(--border);gap:1rem;}
+.info-row:last-child{border-bottom:none;}
+.lbl{font-family:'Fira Code',monospace;font-size:11px;font-weight:500;color:var(--ink3);text-transform:uppercase;letter-spacing:.07em;flex-shrink:0;padding-top:2px;}
+.val{font-size:13px;color:var(--ink);text-align:right;font-weight:500;}
+.val a{color:var(--accent);text-decoration:none;}
+
+/* PROJECTS */
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
+.proj-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:1.75rem;display:flex;flex-direction:column;gap:.9rem;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s;}
+.proj-card:hover{transform:translateY(-5px);box-shadow:var(--shadow2);}
+.proj-num{font-family:'Fira Code',monospace;font-size:11px;color:var(--accent);opacity:.65;}
+.proj-title{font-size:1.1rem;font-weight:700;color:var(--ink);}
+.proj-desc{font-size:.87rem;color:var(--ink2);line-height:1.75;flex:1;}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem;}
+.tag{font-family:'Fira Code',monospace;font-size:11px;padding:.22rem .6rem;background:var(--tag-bg);color:var(--tag-color);border-radius:6px;border:1px solid var(--border);}
+.proj-link{font-size:12px;font-weight:600;color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:.3rem;transition:color .2s;margin-top:.25rem;}
+.proj-link:hover{color:var(--accent2);}
+
+/* SKILLS */
+#skills{background:var(--bg2);}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem;}
+.sk-group{background:var(--bg3);border:1px solid var(--border);border-radius:16px;padding:1.4rem;}
+.sk-title{font-family:'Fira Code',monospace;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.9rem;display:flex;align-items:center;gap:.45rem;}
+.sk-chips{display:flex;flex-wrap:wrap;gap:.35rem;}
+.chip{font-size:12px;font-weight:500;padding:.28rem .75rem;border-radius:20px;background:var(--card);color:var(--ink2);border:1px solid var(--border);transition:all .18s;cursor:default;}
+.chip:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+.chip.hi{background:var(--accent);color:#fff;border-color:var(--accent);}
+
+/* CERTIFICATIONS */
+/* CERTIFICATIONS */
+#certifications{
+  background:var(--bg);
+}
+
+.certs-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:1.5rem;
+}
+
+.cert-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  transition:transform .25s, box-shadow .25s;
+}
+
+.cert-card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow2);
+}
+
+/* HERO IMAGE */
+.hero-img-wrap{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero-photo{
+  width:320px;
+  height:320px;
+  overflow:hidden;
+  border-radius:16px;
+}
+
+.hero-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-photo img:hover{
+  transform: scale(1.05);
+}
+.cert-img-label{
+  font-size:11px;
+  font-family:'Fira Code', monospace;
+  color:var(--ink3);
+  text-align:center;
+  padding:0 1.5rem;
+  line-height:1.5;
+}
+
+.cert-comment{
+  font-size:10px;
+  font-family:'Fira Code', monospace;
+  color:var(--ink3);
+  background:rgba(0,0,0,.04);
+  border-top:1px dashed var(--border);
+  padding:.35rem 1rem;
+  text-align:center;
+}
+
+[data-theme="dark"] .cert-comment{
+  background:rgba(255,255,255,.03);
+}
+
+.cert-body{
+  padding:1.2rem 1.4rem;
+}
+
+.cert-issuer{
+  font-family:'Fira Code', monospace;
+  font-size:11px;
+  color:var(--accent);
+  font-weight:500;
+  margin-bottom:.3rem;
+  display:flex;
+  align-items:center;
+  gap:.35rem;
+}
+
+.cert-name{
+  font-size:.95rem;
+  font-weight:700;
+  color:var(--ink);
+  margin-bottom:.3rem;
+}
+
+.cert-date{
+  font-size:12px;
+  color:var(--ink3);
+  margin-bottom:.4rem;
+}
+
+.cert-id{
+  font-family:'Fira Code', monospace;
+  font-size:10px;
+  color:var(--ink3);
+  background:var(--bg3);
+  padding:.18rem .5rem;
+  border-radius:4px;
+  display:inline-block;
+  margin-bottom:.7rem;
+  word-break:break-all;
+}
+
+.cert-cred{
+  display:inline-flex;
+  align-items:center;
+  gap:.35rem;
+  font-size:12px;
+  font-weight:600;
+  color:var(--accent);
+  text-decoration:none;
+  transition:color .2s;
+}
+
+.cert-cred:hover{
+  color:var(--accent2);
+}
+.hero{
+  height: 100vh;
+  width: 100%;
+  background-image: url("./IMG-20220903-WA0106.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* CONTACT */
+#contact{background:var(--bg2);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.c-items{display:flex;flex-direction:column;gap:.9rem;}
+.c-item{display:flex;align-items:flex-start;gap:.9rem;padding:.95rem 1.1rem;background:var(--bg3);border:1px solid var(--border);border-radius:14px;transition:border-color .2s;}
+.c-item:hover{border-color:var(--accent);}
+.c-icon{width:36px;height:36px;border-radius:10px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:14px;flex-shrink:0;}
+.c-lbl{font-family:'Fira Code',monospace;font-size:10px;color:var(--ink3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.1rem;}
+.c-val{font-size:13px;font-weight:600;color:var(--ink);}
+.c-val a{color:var(--accent);text-decoration:none;}
+.c-val a:hover{text-decoration:underline;}
+.cf{display:flex;flex-direction:column;gap:.95rem;}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;}
+.cf-field{display:flex;flex-direction:column;gap:.35rem;}
+.cf-lbl{font-family:'Fira Code',monospace;font-size:11px;font-weight:500;color:var(--ink3);letter-spacing:.07em;text-transform:uppercase;}
+.cf-input,.cf-ta{background:var(--bg3);border:1.5px solid var(--border);border-radius:10px;padding:.6rem .9rem;font-family:'Poppins',sans-serif;font-size:14px;color:var(--ink);outline:none;transition:border-color .2s;width:100%;}
+.cf-input:focus,.cf-ta:focus{border-color:var(--accent);}
+.cf-ta{resize:vertical;min-height:110px;}
+
+/* FOOTER */
+footer{padding:2rem 5%;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border);flex-wrap:wrap;gap:1rem;}
+.f-copy{font-family:'Fira Code',monospace;font-size:11px;color:var(--ink3);}
+.f-links{display:flex;gap:1.25rem;}
+.f-links a{font-family:'Fira Code',monospace;font-size:11px;color:var(--ink3);text-decoration:none;display:flex;align-items:center;gap:.3rem;transition:color .2s;}
+.f-links a:hover{color:var(--accent);}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+
+
+
+
+/* Academic Section Styling - Stacked for Uniform Width */
+.timeline { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 2rem; 
+}
+
+.year-block { 
+    background: var(--card); 
+    padding: 2rem; 
+    border-radius: 18px; 
+    margin-bottom: 2rem; 
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--accent); /* Uses your theme's accent color */
+    box-shadow: var(--shadow);
+}
+
+.year-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 1.5rem; 
+}
+
+/* Table Container */
+.edu-table-container { 
+    width: 100%; 
+    overflow-x: auto; 
+    margin-bottom: 1.5rem; 
+}
+
+.edu-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    font-size: 0.9rem; 
+}
+
+.edu-table th { 
+    text-align: left; 
+    padding: 12px; 
+    border-bottom: 2px solid var(--bg3); 
+    color: var(--accent); 
+}
+
+.edu-table td { 
+    padding: 12px; 
+    border-bottom: 1px solid var(--border); 
+}
+
+.dist { 
+    color: #10b981; 
+    font-weight: 600; 
+}
+
+/* Updated Image CSS - Forces Table Width */
+.edu-image-box { 
+    width: 100%; 
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--border);
+    text-align: center;
+}
+
+.viewable-img { 
+    width: 100%; /* Matches the table width */
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 12px; 
+    border: 1px solid var(--border); 
+    cursor: pointer; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.viewable-img:hover { 
+    transform: translateY(-5px); 
+    box-shadow: var(--shadow2); 
+}
+
+.img-hint { 
+    font-family: 'Fira Code', monospace;
+    font-size: 11px; 
+    margin-top: 0.8rem; 
+    color: var(--ink3); 
+}
+
+/* Status Pills */
+.status-pill { padding: 5px 14px; border-radius: 50px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
+.complete { background: #dcfce7; color: #166534; }
+.progress { background: #fef9c3; color: #854d0e; }
+
+/* Modal Logic */
+.modal { 
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    padding-top: 60px; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.9); 
+    backdrop-filter: blur(5px);
+}
+
+.modal-content { 
+    margin: auto; 
+    display: block; 
+    width: 90%; 
+    max-width: 800px; 
+    border-radius: 10px;
+}
+
+.close { 
+    position: absolute; 
+    top: 20px; 
+    right: 35px; 
+    color: #fff; 
+    font-size: 40px; 
+    cursor: pointer; 
+}
+
+#hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    padding-top: 72px;
+    position: relative;
+    overflow: hidden;
+    
+    /* Background Image Properties */
+    background: linear-gradient(rgba(13, 15, 30, 0.7), rgba(13, 15, 30, 0.7)), url('IMG-20220903-WA0106.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: adds a parallax effect */
+}
+
+/* Ensure text remains readable against the background */
+.hero-name, .hero-greeting, .hero-role, .hero-sub, .hero-location {
+    color: #ffffff; /* Forces white text if your background is dark */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVE */
+@media(max-width:860px){
+  .hero-inner,.about-grid,.contact-grid{grid-template-columns:1fr;}
+  .hero-img-wrap{order:-1;}
+  .hero-photo{width:200px;height:240px;}
+  .hero-actions,.hero-social{justify-content:center;}
+  .hero-greeting,.hero-name,.hero-role,.hero-sub,.hero-location{text-align:center;}
+  .cf-row{grid-template-columns:1fr;}
+  .nav-links{display:none;}
+  section{padding:4rem 4%;}
+}
