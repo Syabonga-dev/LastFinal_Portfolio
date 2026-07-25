@@ -443,7 +443,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <span class="f-copy">© <span id="date-year></span> Syabonga Njabulo Duma · Software Developer</span>
+  <span class="f-copy">© <span id="date-year"></span> Syabonga Njabulo Duma · Software Developer</span>
   <div class="f-links">
     <a href="https: -github.com/Syabonga-dev" target="_blank"><i class="fab fa-github"></i> GitHub</a>
     <a href="https: -www.linkedin.com/in/syabonga-njabulo-duma-398756329" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
@@ -454,11 +454,11 @@
 <script>
 const dateElem = document.getElementById("date-year");
    
-  const date = DateTime();
+  const date = Date();
 
-   const year = date.getYear();
+   const year = date.getFullYear();
 
-   dateElemt.innerHTML = year;
+   dateElem.innerHTML = year;
    
   const btn = document.getElementById('themeToggle');
 const html = document.documentElement;
