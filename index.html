@@ -454,13 +454,12 @@
 <script>
   const btn = document.getElementById('themeToggle');
 const html = document.documentElement;
-const themeText = document.getElementById('themeText');
 
 // load saved theme
 const savedTheme = localStorage.getItem('theme') || 'light';
 html.setAttribute('data-theme', savedTheme);
 
-updateThemeText(savedTheme);
+
 
 // toggle theme
 btn.addEventListener('click', () => {
@@ -468,13 +467,11 @@ btn.addEventListener('click', () => {
   html.setAttribute('data-theme', next);
   localStorage.setItem('theme', next);
 
-  updateThemeText(next);
+  
 });
 
 // update label text
-function updateThemeText(theme) {
-  themeText.textContent = theme === 'light' ? 'Dark Mode' : 'Light Mode';
-}
+
   const obs = new IntersectionObserver(
     entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
     { threshold: 0.1 }
