@@ -452,13 +452,9 @@
 </footer>
 
 <script>
-const dateElem = document.getElementById("date-year");
-   
-  const date = Date();
-
-   const year = date.getFullYear();
-
-   dateElem.innerHTML = year;
+const date = new Date();
+const year = date.getFullYear();
+dateElem.textContent = year;
    
   const btn = document.getElementById('themeToggle');
 const html = document.documentElement;
