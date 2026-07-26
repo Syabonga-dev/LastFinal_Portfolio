@@ -95,7 +95,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:.85rem 5%;display:fl
 .nav-actions{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:20px;
+    flex-shrink: 0;
 }
 
 .menu-toggle{
