@@ -509,7 +509,7 @@ footer{padding:2rem 5%;display:flex;justify-content:space-between;align-items:ce
   }
 }
 /* Tablets */
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px){
 
     .menu-toggle{
         display:block;
@@ -530,8 +530,9 @@ footer{padding:2rem 5%;display:flex;justify-content:space-between;align-items:ce
 
     .nav-links.active {
         display: flex;
-    }
-  .nav-links{
+    } 
+}
+.nav-links{
     display:none;
     position:absolute;
     top:100%;
@@ -544,8 +545,6 @@ footer{padding:2rem 5%;display:flex;justify-content:space-between;align-items:ce
     gap:1rem;
     border-bottom:1px solid var(--border);
   }
-}
-
 .nav-links.active{
     display:flex;
 }
