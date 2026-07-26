@@ -25,6 +25,7 @@ html{
     scroll-behavior:smooth;
 }
 body{
+  display:none;
     background:var(--bg);
     color:var(--ink);
     font-family:'Poppins',sans-serif;
