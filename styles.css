@@ -507,7 +507,26 @@ footer{padding:2rem 5%;display:flex;justify-content:space-between;align-items:ce
   .menu-toggle{
     display:block;
 }
+/* Tablets */
+@media (max-width: 1024px){
 
+    .nav-logo{
+        font-size: .95rem;
+    }
+
+    .nav-links{
+        gap: .75rem;
+    }
+
+    .nav-links a{
+        font-size: 12px;
+    }
+
+    .theme-btn{
+        width:50px;
+        height:28px;
+    }
+  }
 .nav-links{
     display:none;
     position:absolute;
