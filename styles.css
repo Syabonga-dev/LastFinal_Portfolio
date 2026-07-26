@@ -515,6 +515,7 @@ footer{padding:2rem 5%;display:flex;justify-content:space-between;align-items:ce
 
     .menu-toggle{
         display:block;
+      margin-left: 12px;
     }
 
     .nav-links{
