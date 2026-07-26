@@ -506,6 +506,7 @@ footer{padding:2rem 5%;display:flex;justify-content:space-between;align-items:ce
   .cf-row{grid-template-columns:1fr;}
   .menu-toggle{
     display:block;
+  }
 }
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1280px) {
