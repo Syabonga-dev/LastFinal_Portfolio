@@ -531,8 +531,7 @@ footer{padding:2rem 5%;display:flex;justify-content:space-between;align-items:ce
     .nav-links.active {
         display: flex;
     }
-}
-.nav-links{
+  .nav-links{
     display:none;
     position:absolute;
     top:100%;
@@ -544,13 +543,13 @@ footer{padding:2rem 5%;display:flex;justify-content:space-between;align-items:ce
     padding:1rem 0;
     gap:1rem;
     border-bottom:1px solid var(--border);
+  }
 }
 
 .nav-links.active{
     display:flex;
 }
   section{padding:4rem 4%;}
-}
 
 /* Project Card Story Dropdown */
 .story-dropdown{
