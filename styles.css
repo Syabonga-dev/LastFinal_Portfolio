@@ -519,6 +519,19 @@ footer{padding:2rem 5%;display:flex;justify-content:space-between;align-items:ce
         display:none;
     }
 }
+@media (max-width: 1280px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
 .nav-links{
     display:none;
     position:absolute;
