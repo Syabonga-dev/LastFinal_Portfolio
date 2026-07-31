@@ -561,47 +561,9 @@ footer{padding:2rem 5%;display:flex;justify-content:space-between;align-items:ce
   }
 }
 /* Tablets */
-@media (min-width: 768px){
 
-    .menu-toggle{
-        display:block;
-      margin-left: 12px;
-    }
 
-    .nav-links{
-        display:none;
-    }
-}
-@media (max-width: 1280px) {
-    .menu-toggle {
-        display: block;
-        margin-left: 12px;
-    }
 
-    .nav-links {
-        display: none;
-    }
-
-    .nav-links.active {
-        display: flex;
-    } 
-}
-.nav-links{
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    width:100%;
-    background:var(--nav-bg);
-    flex-direction:column;
-    align-items:center;
-    padding:1rem 0;
-    gap:1rem;
-    border-bottom:1px solid var(--border);
-  }
-.nav-links.active{
-    display:flex;
-}
   section{padding:4rem 4%;}
 
 /* Project Card Story Dropdown */
@@ -667,4 +629,32 @@ footer{padding:2rem 5%;display:flex;justify-content:space-between;align-items:ce
 @keyframes storyFadeIn{
   from{opacity:0;transform:translateY(-6px);}
   to{opacity:1;transform:translateY(0);}
+}
+
+/* Mobile Navigation */
+@media (max-width:860px){
+  .hero-inner,.about-grid,.contact-grid{grid-template-columns:1fr;}
+  .hero-img-wrap{order:-1;}
+  .hero-photo{width:200px;height:240px;}
+  .hero-actions,.hero-social{justify-content:center;}
+  .hero-greeting,.hero-name,.hero-role,.hero-sub,.hero-location{text-align:center;}
+  .cf-row{grid-template-columns:1fr;}
+
+  .menu-toggle{display:block;margin-left:12px;}
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:var(--nav-bg);
+    flex-direction:column;
+    align-items:center;
+    padding:1rem 0;
+    gap:1rem;
+    border-bottom:1px solid var(--border);
+  }
+
+  .nav-links.active{display:flex;}
 }
