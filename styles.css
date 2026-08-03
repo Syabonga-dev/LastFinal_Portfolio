@@ -793,6 +793,7 @@ footer{padding:2rem 5%;display:flex;justify-content:space-between;align-items:ce
     }
 
     .hero-actions .btn {
+      display: none;
         max-width: 135px;
         padding: .5rem .65rem;
         font-size: .72rem;
