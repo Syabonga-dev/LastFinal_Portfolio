@@ -662,37 +662,153 @@ footer{padding:2rem 5%;display:flex;justify-content:space-between;align-items:ce
 }
 
 /* Mobile Navigation */
-@media (max-width:860px){
-  .hero-inner,.about-grid,.contact-grid{grid-template-columns:1fr;}
-  .hero-img-wrap{order:-1;}
-  .hero-photo{width:200px;height:240px;}
-  .hero-actions,.hero-social{justify-content:center;}
-  .hero-greeting,.hero-name,.hero-role,.hero-sub,.hero-location{text-align:center;}
-  .cf-row{grid-template-columns:1fr;}
+/* ===========================
+   Tablet & Mobile (860px)
+=========================== */
+@media (max-width: 860px) {
 
-  .menu-toggle{display:block;margin-left:12px;}
+    /* ---------- Layout ---------- */
 
-  .nav-links{
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    width:100%;
-    background:var(--nav-bg);
-    flex-direction:column;
-    align-items:center;
-    padding:1rem 0;
-    gap:1rem;
-    border-bottom:1px solid var(--border);
-  }
+    .hero-inner,
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .nav-links.active{display:flex;}
+    .cf-row {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-img-wrap {
+        order: -1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-photo {
+        width: 200px;
+        height: 240px;
+    }
+
+    .hero-greeting,
+    .hero-name,
+    .hero-role,
+    .hero-sub,
+    .hero-location {
+        text-align: center;
+    }
+
+    .hero-actions,
+    .hero-social {
+        justify-content: center;
+    }
+
+    /* ---------- Hero Buttons ---------- */
+
+    .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: .6rem;
+    }
+
+    .hero-actions .btn {
+        flex: 1;
+        max-width: 150px;
+        padding: .55rem .75rem;
+        font-size: .8rem;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    /* ---------- Navigation ---------- */
+
+    nav {
+        position: relative;
+    }
+
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        margin-left: auto;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        margin-left: 0;
+        cursor: pointer;
+        z-index: 1002;
+    }
+
+    .theme-btn,
+    .theme-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1002;
+    }
+
+    /* Mobile Menu */
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        width: 100%;
+        background: var(--nav-bg);
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.25rem 0;
+        border: 1px solid var(--border);
+        border-radius: 0 0 16px 16px;
+        box-shadow: var(--shadow);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }
+
+/* ===========================
+   Small Phones (430px)
+=========================== */
+
 @media (max-width: 430px) {
+
+    .hero-photo {
+        width: 180px;
+        height: 220px;
+    }
+
+    .hero-actions {
+        gap: .5rem;
+    }
 
     .hero-actions .btn {
         max-width: 135px;
         padding: .5rem .65rem;
-        font-size: 11px;
+        font-size: .72rem;
+    }
+
+    .hero-actions .btn i {
+        margin-right: 4px;
+        font-size: .7rem;
+    }
+
+    .nav-actions {
+        gap: .5rem;
+    }
+
+    .menu-toggle {
+        width: 38px;
+        height: 38px;
     }
 }
