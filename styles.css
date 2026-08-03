@@ -812,3 +812,6 @@ footer{padding:2rem 5%;display:flex;justify-content:space-between;align-items:ce
         height: 38px;
     }
 }
+.hero-actions .btn i{
+  marging-right: 5px;
+}
