@@ -467,77 +467,77 @@
 </footer>
 
 <script>
-const dateElem = document.getElementById("date-year");
-const date = new Date();
-const year = date.getFullYear();
-dateElem.textContent = year;
-   
-  const btn = document.getElementById('themeToggle');
-const html = document.documentElement;
+      const dateElem = document.getElementById("date-year");
+      const date = new Date();
+      const year = date.getFullYear();
+      dateElem.textContent = year;
+         
+        const btn = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      
+      // load saved theme
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      html.setAttribute('data-theme', savedTheme);
+      
+      
+      
+      // toggle theme
+      btn.addEventListener('click', () => {
+        const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      
+        
+      });
+      
+      // update label text
+      
+        const obs = new IntersectionObserver(
+          entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+          { threshold: 0.1 }
+        );
+        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+      
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("imgFull");
+      const span = document.getElementsByClassName("close")[0];
+      
+      // Select all images with the viewable-img class
+      document.querySelectorAll('.viewable-img').forEach(image => {
+        image.onclick = function() {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+        }
+      });
+      
+      span.onclick = function() { 
+        modal.style.display = "none";
+      }
+      
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.querySelector(".nav-links");
+      
+      menuToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+      
+          const icon = menuToggle.querySelector("i");
+      
+          if (navLinks.classList.contains("active")) {
+              icon.classList.remove("fa-bars");
+              icon.classList.add("fa-times");
+          } else {
+              icon.classList.remove("fa-times");
+              icon.classList.add("fa-bars");
+          }
+      });
 
-// load saved theme
-const savedTheme = localStorage.getItem('theme') || 'light';
-html.setAttribute('data-theme', savedTheme);
 
-
-
-// toggle theme
-btn.addEventListener('click', () => {
-  const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-  html.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
-
-  
-});
-
-// update label text
-
-  const obs = new IntersectionObserver(
-    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-    { threshold: 0.1 }
-  );
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-const modal = document.getElementById("imageModal");
-const modalImg = document.getElementById("imgFull");
-const span = document.getElementsByClassName("close")[0];
-
-// Select all images with the viewable-img class
-document.querySelectorAll('.viewable-img').forEach(image => {
-  image.onclick = function() {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-  }
-});
-
-span.onclick = function() { 
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.querySelector(".nav-links");
-
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-
-    const icon = menuToggle.querySelector("i");
-
-    if (navLinks.classList.contains("active")) {
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-times");
-    } else {
-        icon.classList.remove("fa-times");
-        icon.classList.add("fa-bars");
-    }
-});
-
-
-</script>
-</body>
-   </html>
+    </script>
+  </body>
+</html>
 
