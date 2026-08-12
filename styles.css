@@ -43,9 +43,7 @@
 }
 
 [data-theme = "light"]{
-  #butn{
-    color:black;
-  }
+  #butn : black;
 }
 [data-theme="dark"]{
   /* =========================
