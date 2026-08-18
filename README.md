@@ -1,52 +1,141 @@
-Syabonga Njabulo Duma — Developer Portfolio
-Personal portfolio website showcasing my projects, skills, certifications, and academic journey as a final-year Diploma in Information Technology (Software Development) student at Nelson Mandela University.
-🔗 Live site: syabongadevportfolio-nu.vercel.app
-About
-I'm a final-year IT student passionate about building practical software that solves real-world problems. This portfolio highlights three full systems I've built from the ground up — CivicAlert, SAPS CaseVault, and PhilaLink — along with my cybersecurity brand site, CyberSavvy, using C#, .NET, React, Python, and more.
-I'm deeply interested in cybersecurity, networking, and clean architecture, and I hold two Cisco certifications.
-Built With
-HTML5 — semantic page structure
-CSS3 — responsive styling and layout
-JavaScript — interactivity and dynamic content
-EmailJS — handles the contact form, sending messages directly from the client without a custom backend
-Features
-Responsive design across devices
-Project showcase with GitHub links and live demos
-Dedicated deep-dive section on PhilaLink, including the personal story behind the project
-Skills and technologies breakdown by category
-Certification showcase with verified Credly badge links
-Academic history table tracking module marks year by year
-Contact form powered by EmailJS
-Downloadable CV (PDF)
-Featured Projects
-Project
-Description
-Stack
-PhilaLink
-Healthcare-connectivity platform linking patients with community health workers and services
-React, ASP.NET Web API, Node.js, Python
-SAPS CaseVault
-Full-stack case management system with role-based access control and 3-tier architecture
-C#, .NET, React, Entity Framework Core, MS SQL Server
-CivicAlert
-Community civic alert platform for reporting and viewing local crime
-C#, .NET, ASP.NET Core, SignalR, Google Maps API
-CyberSavvy
-Cybersecurity brand website for a security-focused client presence (Live Demo)
-HTML5, CSS3, JavaScript, EmailJS
-Getting Started
-To run this project locally:
-Bash
-No build step or dependencies required — this is a static site built with vanilla HTML, CSS, and JavaScript.
-EmailJS Setup
-The contact form uses EmailJS to send messages. To use your own EmailJS account, update the service ID, template ID, and public key in the relevant JavaScript file with your own credentials.
-Certifications
-CCNA: Introduction to Networks — Cisco Networking Academy (May 2025)
-Introduction to Cybersecurity — Cisco Networking Academy (Apr 2024)
-Contact
-Email: njabulod189@gmail.com
-Phone: +27 72 434 7162
-LinkedIn: Syabonga Njabulo Duma
-GitHub: @Syabonga-dev
-Location: Port Elizabeth, Eastern Cape, South Africa
-© Syabonga Njabulo Duma · Software Developer
+# Syabonga Njabulo Duma — Developer Portfolio
+
+> Personal developer portfolio showcasing software projects, technical skills, professional certifications, academic progression, and software development experience.
+
+🌐 **Live Website:** https://syabongadevportfolio-nu.vercel.app
+
+---
+
+## Overview
+
+This repository contains the source code for the personal developer portfolio of **Syabonga Njabulo Duma**, a final-year Diploma in Information Technology (Software Development) student at **Nelson Mandela University**.
+
+The portfolio serves as a central presentation of my technical development journey, combining academic experience, software engineering projects, certifications, technical skills, and professional interests.
+
+The website particularly highlights my experience building complete software systems rather than isolated programming exercises. Featured projects include **PhilaLink**, **SAPS CaseVault**, **CivicAlert**, and **CyberSavvy**.
+
+My primary areas of interest include:
+
+- Software development
+- Full-stack application development
+- Cybersecurity
+- Networking
+- Database development
+- Clean architecture
+- API development
+- Practical problem-solving
+
+---
+
+## About the Developer
+
+**Syabonga Njabulo Duma** is a final-year Information Technology student majoring in Software Development at **Nelson Mandela University** in South Africa.
+
+My development journey focuses on building practical applications that address real-world problems.
+
+Through academic projects, personal projects, and independent development, I have gained experience working across the full software-development lifecycle, including:
+
+- Requirements analysis
+- System design
+- Database design
+- Backend API development
+- Frontend development
+- Authentication and authorization
+- Integration with external services
+- Testing and debugging
+- Deployment
+- Documentation
+
+I am particularly interested in the intersection between **software engineering, cybersecurity, and networking**.
+
+---
+
+# Portfolio Highlights
+
+The portfolio brings together several areas of my development journey.
+
+### Software Projects
+
+Complete systems developed to solve practical problems:
+
+- **PhilaLink** — Healthcare connectivity platform
+- **SAPS CaseVault** — Full-stack case management system
+- **CivicAlert** — Community crime-reporting platform
+
+### Cybersecurity
+
+- **CyberSavvy** — Cybersecurity-focused brand website
+
+### Academic Development
+
+The portfolio also documents academic progression, including:
+
+- Academic history
+- Module marks
+- Technical subjects
+- Software development progression
+
+### Professional Development
+
+The certification section highlights verified industry certifications obtained through Cisco Networking Academy.
+
+---
+
+# Featured Projects
+
+## PhilaLink
+
+**Healthcare Connectivity Platform**
+
+PhilaLink is a healthcare-focused digital platform designed to improve connectivity between patients, community health workers, clinics, and healthcare-related services.
+
+The project explores how software can be used to improve access to healthcare services and simplify communication between different participants in the healthcare ecosystem.
+
+### Technologies
+
+- React
+- ASP.NET Web API
+- Node.js
+- Python
+- REST APIs
+- Database technologies
+
+### Key Areas
+
+- Healthcare service connectivity
+- Patient-oriented functionality
+- Community health worker interaction
+- Healthcare service discovery
+- Digital communication
+
+---
+
+## SAPS CaseVault
+
+**Full-Stack Case Management System**
+
+SAPS CaseVault is a full-stack case management system designed around the management and organization of case-related information.
+
+The system demonstrates enterprise-oriented software development concepts including role-based access control, layered architecture, database persistence, and API-driven communication.
+
+### Technologies
+
+- C#
+- .NET
+- ASP.NET Core
+- React
+- Entity Framework Core
+- Microsoft SQL Server
+
+### Architecture
+
+The application follows a structured **three-tier architecture** separating:
+
+```text
+Presentation Layer
+        ↓
+Business Logic Layer
+        ↓
+Data Access Layer
+        ↓
+Database
