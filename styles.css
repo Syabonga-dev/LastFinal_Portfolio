@@ -1,9 +1,4 @@
 :root{
-  /* =========================
-     GRAPHITE + EMERALD
-     LIGHT MODE
-  ========================= */
-
   --bg:#f3f7f5;
   --bg2:#ffffff;
   --bg3:#eaf1ed;
@@ -28,17 +23,15 @@
   --tag-bg:#dff5ea;
   --tag-color:#047857;
 
-  /* Status colours */
   --success-bg:#dcfce7;
   --success-text:#166534;
 
   --progress-bg:#fef3c7;
   --progress-text:#92400e;
 
-  /* Hero overlay */
   --hero-overlay:rgba(7,19,15,0.68);
 
-  /* General dark overlay */
+
   --modal-bg:rgba(0,0,0,0.90);
 }
 
@@ -48,11 +41,6 @@
   } 
 }
 [data-theme="dark"]{
-  /* =========================
-     GRAPHITE + EMERALD
-     DARK MODE
-  ========================= */
-
   --bg:#07130f;
   --bg2:#0d1914;
   --bg3:#13221b;
@@ -76,25 +64,17 @@
 
   --tag-bg:#123b2c;
   --tag-color:#6ee7b7;
-
-  /* Status colours */
   --success-bg:#123b2c;
   --success-text:#86efac;
 
   --progress-bg:#3a2f0b;
   --progress-text:#fcd34d;
 
-  /* Hero overlay */
   --hero-overlay:rgba(3,12,8,0.72);
 
-  /* General dark overlay */
   --modal-bg:rgba(0,0,0,0.94);
 }
 
-
-/* =========================
-   GLOBAL RESET
-========================= */
 
 *,*::before,*::after{
   box-sizing:border-box;
@@ -117,11 +97,6 @@ body{
     color .3s ease;
 }
 
-
-/* =========================
-   SCROLLBAR
-========================= */
-
 ::-webkit-scrollbar{
   width:5px;
 }
@@ -139,10 +114,6 @@ body{
   background:var(--accent2);
 }
 
-
-/* =========================
-   STORY GALLERY
-========================= */
 
 .story-gallery{
   display:grid;
@@ -171,9 +142,6 @@ body{
 }
 
 
-/* =========================
-   LARGE TABLETS
-========================= */
 
 @media(max-width:1024px){
 
@@ -183,9 +151,7 @@ body{
 }
 
 
-/* =========================
-   TABLETS
-========================= */
+
 
 @media(max-width:768px){
 
@@ -196,9 +162,6 @@ body{
 }
 
 
-/* =========================
-   MOBILE
-========================= */
 
 @media(max-width:480px){
 
@@ -212,10 +175,6 @@ body{
   }
 }
 
-
-/* =========================
-   NAVIGATION
-========================= */
 
 nav{
   position:fixed;
@@ -272,9 +231,7 @@ nav{
 }
 
 
-/* =========================
-   THEME BUTTON
-========================= */
+
 
 .theme-btn{
   width:58px;
@@ -337,9 +294,6 @@ nav{
 }
 
 
-/* =========================
-   NAV ACTIONS
-========================= */
 
 .nav-actions{
   display:flex;
@@ -349,9 +303,6 @@ nav{
 }
 
 
-/* =========================
-   MENU TOGGLE
-========================= */
 
 .menu-toggle{
   display:none;
@@ -379,10 +330,6 @@ nav{
   color:#ffffff;
 }
 
-
-/* =========================
-   HERO
-========================= */
 
 #hero{
   min-height:100vh;
@@ -481,10 +428,6 @@ nav{
 }
 
 
-/* =========================
-   BUTTONS
-========================= */
-
 .btn{
   display:inline-flex;
   align-items:center;
@@ -532,10 +475,6 @@ nav{
 }
 
 
-/* =========================
-   HERO SOCIALS
-========================= */
-
 .hero-social{
   display:flex;
   gap:.65rem;
@@ -573,11 +512,6 @@ nav{
 
   transform:translateY(-2px);
 }
-
-
-/* =========================
-   HERO PHOTO
-========================= */
 
 .hero-img-wrap{
   display:flex;
@@ -665,11 +599,6 @@ nav{
   letter-spacing:-.05em;
 }
 
-
-/* =========================
-   SECTIONS
-========================= */
-
 section{
   padding:5rem 5%;
 }
@@ -725,10 +654,6 @@ section{
   margin-bottom:2.5rem;
 }
 
-
-/* =========================
-   ABOUT
-========================= */
 
 #about{
   background:var(--bg2);
@@ -817,10 +742,6 @@ section{
 }
 
 
-/* =========================
-   PROJECTS
-========================= */
-
 .proj-grid{
   display:grid;
 
@@ -888,11 +809,6 @@ section{
   flex:1;
 }
 
-
-/* =========================
-   TAGS
-========================= */
-
 .tags{
   display:flex;
   flex-wrap:wrap;
@@ -938,11 +854,6 @@ section{
 .proj-link:hover{
   color:var(--accent2);
 }
-
-
-/* =========================
-   SKILLS
-========================= */
 
 #skills{
   background:var(--bg2);
@@ -1024,10 +935,6 @@ section{
   border-color:var(--accent);
 }
 
-
-/* =========================
-   CERTIFICATIONS
-========================= */
 
 #certifications{
   background:var(--bg);
