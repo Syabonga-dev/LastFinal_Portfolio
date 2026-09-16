@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="philalink-modal.css" />
     <link rel="icon" type="image/png" href="icon.png" />
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -305,105 +306,16 @@
               Download project specification
             </a>
 
-            <details class="story-dropdown">
-              <summary class="story-toggle">
-                <i class="fas fa-chevron-right story-icon"></i> About PhilaLink
-              </summary>
-              <div class="story-content">
-                <h4 class="story-heading">The Story Behind PhilaLink</h4>
-                <p>
-                  PhilaLink began with something I have witnessed for most of my
-                  life.
-                </p>
-                <p>
-                  For more than 15 years, I have lived with my uncle's wife, who
-                  still serves as a medication proxy in our community. Through
-                  her, I have seen the dedication it takes to collect chronic
-                  medication for elderly and vulnerable patients, as well as the
-                  challenges that come with the current paper-based proxy
-                  system. Lost collection cards, forgotten collection dates,
-                  long queues, and communication gaps between patients and
-                  clinics are problems that affect people every day.
-                </p>
-                <p>
-                  Watching these challenges firsthand made me realise that
-                  technology could simplify the process and improve the
-                  experience for everyone involved. That idea became the
-                  foundation of PhilaLink.
-                </p>
-                <p>
-                  PhilaLink is a digital healthcare platform designed to
-                  modernise the proxy medication collection process within South
-                  Africa's public healthcare system. It replaces paper-based
-                  processes with a secure digital platform that helps caregivers
-                  manage multiple patients, keeps patients informed through
-                  automated medication reminders, and provides tools that make
-                  healthcare more accessible. The platform also includes clinic
-                  location services and intelligent health support to assist
-                  users in making informed decisions about their wellbeing.
-                </p>
-                <p>
-                  One of the platform's key features is Phila Chat, an
-                  AI-powered health assistant that allows users to describe
-                  their symptoms and declare any known allergies before
-                  receiving personalised health guidance. Based on the
-                  information provided, Phila Chat recommends suitable
-                  over-the-counter medication where appropriate, offers
-                  self-care advice for minor conditions, and encourages users to
-                  seek professional medical attention when symptoms require
-                  further assessment.
-                </p>
-                <p>
-                  The name PhilaLink reflects the purpose of the platform. It
-                  combines the Nguni word Phila, meaning "to be healthy" or "to
-                  live", with the English word Link, representing connection.
-                  Together, the name symbolises a connection between patients,
-                  caregivers, healthcare professionals, and the services that
-                  support healthier communities.
-                </p>
-                <p>
-                  PhilaLink is more than a final-year project to me. It is a
-                  solution inspired by someone close to me who continues to
-                  serve our community as a medication proxy. It represents my
-                  belief that software can solve real problems, strengthen
-                  public healthcare, and improve people's everyday lives.
-                </p>
-              </div>
-              <div class="story-gallery">
-                <img
-                  src="./photo1.jpg"
-                  alt="The community healthcare worker who inspired PhilaLink"
-                />
-                <img
-                  src="./photo2.jpg"
-                  alt="Community healthcare workers"
-                />
-                <img
-                  src="./photo3.jpg"
-                  alt="Community healthcare workers"
-                />
-                <img
-                  src="./photo4.jpg"
-                  alt="Community healthcare workers"
-                />
-                <img
-                  src="./photo5.jpg"
-                  alt="Community healthcare workers"
-                />
-                <img
-                  src="./photo6.jpg"
-                  alt="Community healthcare workers"
-                />
-                <img
-                  src="./photo7.jpg"
-                  alt="Community healthcare workers"
-                />
-                <img
-                  src="./photo8.jpg"
-                  alt="Community healthcare workers"
-                />
-              </div>
-            </details>
+            <button
+              type="button"
+              class="philalink-about-btn"
+              id="openPhilaLinkModal"
+              aria-haspopup="dialog"
+              aria-controls="philalinkModal"
+            >
+              <i class="fas fa-chevron-right"></i>
+              About PhilaLink
+            </button>
           </div>
           <div class="proj-card reveal">
             <span class="proj-num"> - 004</span>
@@ -476,6 +388,256 @@
         </div>
       </div>
     </section>
+
+    <!-- PHILALINK ABOUT MODAL -->
+    <div
+      class="philalink-modal"
+      id="philalinkModal"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="philalinkModalTitle"
+    >
+      <div class="philalink-modal__dialog">
+        <button
+          type="button"
+          class="philalink-modal__close"
+          id="closePhilaLinkModal"
+          aria-label="Close About PhilaLink"
+        >
+          &times;
+        </button>
+
+        <div class="philalink-modal__header">
+          <p class="philalink-modal__eyebrow">PhilaLink</p>
+          <h3 class="philalink-modal__title" id="philalinkModalTitle">
+            The Story Behind PhilaLink
+          </h3>
+        </div>
+
+        <div class="philalink-tabs" role="tablist" aria-label="About PhilaLink">
+          <button
+            type="button"
+            class="philalink-tab active"
+            id="philalinkOriginTab"
+            role="tab"
+            aria-selected="true"
+            aria-controls="philalinkOriginPanel"
+            data-philalink-tab="origin"
+          >
+            How the idea was born
+          </button>
+
+          <button
+            type="button"
+            class="philalink-tab"
+            id="philalinkCommunityTab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="philalinkCommunityPanel"
+            data-philalink-tab="community"
+          >
+            Community health care workers from my village that inspired the birth
+            of PhilaLink, one of them is my uncle's wife
+          </button>
+        </div>
+
+        <div
+          class="philalink-tab-panel active"
+          id="philalinkOriginPanel"
+          role="tabpanel"
+          aria-labelledby="philalinkOriginTab"
+          data-philalink-panel="origin"
+        >
+          <div class="philalink-story-copy">
+            <p>
+              PhilaLink began with something I have witnessed for most of my
+              life.
+            </p>
+            <p>
+              For more than 15 years, I have lived with my uncle's wife, who
+              still serves as a medication proxy in our community. Through her,
+              I have seen the dedication it takes to collect chronic medication
+              for elderly and vulnerable patients, as well as the challenges
+              that come with the current paper-based proxy system. Lost
+              collection cards, forgotten collection dates, long queues, and
+              communication gaps between patients and clinics are problems that
+              affect people every day.
+            </p>
+            <p>
+              Watching these challenges firsthand made me realise that
+              technology could simplify the process and improve the experience
+              for everyone involved. That idea became the foundation of
+              PhilaLink.
+            </p>
+            <p>
+              PhilaLink is a digital healthcare platform designed to modernise
+              the proxy medication collection process within South Africa's
+              public healthcare system. It replaces paper-based processes with a
+              secure digital platform that helps caregivers manage multiple
+              patients, keeps patients informed through automated medication
+              reminders, and provides tools that make healthcare more
+              accessible. The platform also includes clinic location services
+              and intelligent health support to assist users in making informed
+              decisions about their wellbeing.
+            </p>
+            <p>
+              One of the platform's key features is Phila Chat, an AI-powered
+              health assistant that allows users to describe their symptoms and
+              declare any known allergies before receiving personalised health
+              guidance. Based on the information provided, Phila Chat recommends
+              suitable over-the-counter medication where appropriate, offers
+              self-care advice for minor conditions, and encourages users to
+              seek professional medical attention when symptoms require further
+              assessment.
+            </p>
+            <p>
+              The name PhilaLink reflects the purpose of the platform. It
+              combines the Nguni word Phila, meaning "to be healthy" or "to
+              live", with the English word Link, representing connection.
+              Together, the name symbolises a connection between patients,
+              caregivers, healthcare professionals, and the services that
+              support healthier communities.
+            </p>
+            <p>
+              PhilaLink is more than a final-year project to me. It is a
+              solution inspired by someone close to me who continues to serve
+              our community as a medication proxy. It represents my belief that
+              software can solve real problems, strengthen public healthcare,
+              and improve people's everyday lives.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="philalink-tab-panel"
+          id="philalinkCommunityPanel"
+          role="tabpanel"
+          aria-labelledby="philalinkCommunityTab"
+          data-philalink-panel="community"
+          hidden
+        >
+          <p class="philalink-community-copy">
+            These are people from my village connected to the community-health
+            work and lived experience that inspired the birth of PhilaLink.
+          </p>
+
+          <p class="philalink-photo-label" id="philalinkPhotoLabel">
+            Community health care workers from my village
+          </p>
+
+          <div class="philalink-carousel">
+            <button
+              type="button"
+              class="philalink-carousel__arrow philalink-carousel__arrow--prev"
+              id="philalinkPrevPhoto"
+              aria-label="Previous photo"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div
+              class="philalink-carousel__viewport"
+              id="philalinkCarouselViewport"
+            >
+              <div class="philalink-carousel__track" id="philalinkCarouselTrack">
+                <figure
+                  class="philalink-carousel__slide active"
+                  data-caption="Community health care workers from my village"
+                >
+                  <img
+                    src="./photo1.jpg"
+                    alt="Community health care workers from my village"
+                  />
+                </figure>
+
+                <figure
+                  class="philalink-carousel__slide"
+                  data-caption="My uncle"
+                >
+                  <img src="./photo2.jpg" alt="My uncle" />
+                </figure>
+
+                <figure
+                  class="philalink-carousel__slide"
+                  data-caption="Community health care workers from my village"
+                >
+                  <img
+                    src="./photo3.jpg"
+                    alt="Community health care workers from my village"
+                  />
+                </figure>
+
+                <figure
+                  class="philalink-carousel__slide"
+                  data-caption="Community health care workers from my village"
+                >
+                  <img
+                    src="./photo4.jpg"
+                    alt="Community health care workers from my village"
+                  />
+                </figure>
+
+                <figure
+                  class="philalink-carousel__slide"
+                  data-caption="Community health care workers from my village"
+                >
+                  <img
+                    src="./photo5.jpg"
+                    alt="Community health care workers from my village"
+                  />
+                </figure>
+
+                <figure
+                  class="philalink-carousel__slide"
+                  data-caption="Community health care workers from my village"
+                >
+                  <img
+                    src="./photo6.jpg"
+                    alt="Community health care workers from my village"
+                  />
+                </figure>
+
+                <figure
+                  class="philalink-carousel__slide"
+                  data-caption="Community health care workers from my village"
+                >
+                  <img
+                    src="./photo7.jpg"
+                    alt="Community health care workers from my village"
+                  />
+                </figure>
+
+                <figure
+                  class="philalink-carousel__slide"
+                  data-caption="Community health care workers from my village"
+                >
+                  <img
+                    src="./photo8.jpg"
+                    alt="Community health care workers from my village"
+                  />
+                </figure>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="philalink-carousel__arrow philalink-carousel__arrow--next"
+              id="philalinkNextPhoto"
+              aria-label="Next photo"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <div class="philalink-carousel__counter" aria-live="polite">
+            <span id="philalinkPhotoCurrent">1</span>
+            <span>/</span>
+            <span id="philalinkPhotoTotal">8</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- SKILLS -->
     <section id="skills">
@@ -1042,5 +1204,6 @@
         }
       });
     </script>
+    <script src="philalink-modal.js"></script>
   </body>
 </html>
