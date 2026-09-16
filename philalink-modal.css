@@ -1,0 +1,331 @@
+/* =========================================================
+   PHILALINK ABOUT MODAL ONLY
+   This file intentionally styles only the PhilaLink modal.
+========================================================= */
+
+.philalink-about-btn {
+  margin-top: 0.25rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  font-family: "Fira Code", monospace;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+
+.philalink-about-btn:hover {
+  color: var(--accent2);
+}
+
+.philalink-about-btn i {
+  font-size: 10px;
+}
+
+.philalink-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2500;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(0, 0, 0, 0.74);
+  backdrop-filter: blur(8px);
+}
+
+.philalink-modal.is-open {
+  display: flex;
+}
+
+.philalink-modal__dialog {
+  position: relative;
+  width: min(1040px, 100%);
+  max-height: min(90vh, 900px);
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--card);
+  color: var(--ink);
+  box-shadow: var(--shadow2);
+}
+
+.philalink-modal__header {
+  padding: 1.75rem 4rem 1rem 1.75rem;
+}
+
+.philalink-modal__eyebrow {
+  margin-bottom: 0.35rem;
+  color: var(--accent);
+  font-family: "Fira Code", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.philalink-modal__title {
+  color: var(--ink);
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+
+.philalink-modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--bg3);
+  color: var(--ink);
+  font-size: 1.65rem;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.philalink-modal__close:hover {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+.philalink-tabs {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.7fr) minmax(320px, 1.3fr);
+  gap: 0.65rem;
+  padding: 0 1.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.philalink-tab {
+  min-height: 54px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg3);
+  color: var(--ink2);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.45;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.philalink-tab:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.philalink-tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+.philalink-tab-panel {
+  padding: 1.5rem 1.75rem 1.75rem;
+}
+
+.philalink-tab-panel[hidden] {
+  display: none;
+}
+
+.philalink-story-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.philalink-story-copy p,
+.philalink-community-copy {
+  color: var(--ink2);
+  font-size: 0.9rem;
+  line-height: 1.85;
+}
+
+.philalink-community-copy {
+  max-width: 760px;
+  margin: 0 auto 1.1rem;
+  text-align: center;
+}
+
+.philalink-photo-label {
+  min-height: 1.7rem;
+  margin-bottom: 0.75rem;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.philalink-carousel {
+  position: relative;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 48px;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.philalink-carousel__viewport {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem 0;
+}
+
+.philalink-carousel__track {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  will-change: transform;
+  transition: transform 0.38s ease;
+}
+
+.philalink-carousel__slide {
+  flex: 0 0 min(66%, 520px);
+  margin: 0;
+  opacity: 0.35;
+  transform: scale(0.88);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.philalink-carousel__slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.philalink-carousel__slide img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  background: var(--bg3);
+}
+
+.philalink-carousel__arrow {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--bg3);
+  color: var(--accent);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.philalink-carousel__arrow:hover {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+  transform: scale(1.05);
+}
+
+.philalink-carousel__counter {
+  margin-top: 0.4rem;
+  color: var(--ink3);
+  font-family: "Fira Code", monospace;
+  font-size: 11px;
+  text-align: center;
+}
+
+body.philalink-modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 760px) {
+  .philalink-modal {
+    padding: 0.7rem;
+  }
+
+  .philalink-modal__dialog {
+    max-height: 94vh;
+    border-radius: 16px;
+  }
+
+  .philalink-modal__header {
+    padding: 1.35rem 3.7rem 0.85rem 1.1rem;
+  }
+
+  .philalink-tabs {
+    grid-template-columns: 1fr;
+    padding: 0 1.1rem 0.85rem;
+  }
+
+  .philalink-tab {
+    min-height: auto;
+  }
+
+  .philalink-tab-panel {
+    padding: 1.1rem;
+  }
+
+  .philalink-carousel {
+    grid-template-columns: 38px minmax(0, 1fr) 38px;
+    gap: 0.35rem;
+  }
+
+  .philalink-carousel__arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .philalink-carousel__slide {
+    flex-basis: 82%;
+  }
+
+  .philalink-carousel__slide img {
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 430px) {
+  .philalink-carousel {
+    grid-template-columns: 34px minmax(0, 1fr) 34px;
+  }
+
+  .philalink-carousel__arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+  }
+
+  .philalink-carousel__slide {
+    flex-basis: 86%;
+  }
+
+  .philalink-story-copy p,
+  .philalink-community-copy {
+    font-size: 0.84rem;
+  }
+}
