@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
@@ -27,159 +28,122 @@
     <link rel="stylesheet" href="philalink-modal.css" />
     <link rel="icon" type="image/png" href="icon.png" />
 
+    <!--
+      MOBILE ONLY:
+      Reduce the size of certification cards/images and
+      academic record cards/images.
+
+      Desktop and laptop styling remains controlled entirely
+      by the original styles.css file.
+    -->
     <style>
-      /* =====================================================
-         RESPONSIVE CERTIFICATE / ACADEMIC RECORD SIZING
-      ===================================================== */
+      @media (max-width: 600px) {
+        /* =====================================================
+           CERTIFICATIONS - MOBILE ONLY
+        ===================================================== */
 
-      /* Large screens / desktop */
-      #certifications .certs-grid {
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 1.15rem;
-        max-width: 1050px;
-        margin: 0 auto;
-        align-items: start;
-      }
-
-      #certifications .cert-card {
-        width: 100%;
-        max-width: 330px;
-        justify-self: center;
-      }
-
-      #certifications .cert-img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 180px;
-        padding: 0.75rem;
-        overflow: hidden;
-        background: var(--bg3);
-      }
-
-      #certifications .cert-img img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-
-      #certifications .cert-body {
-        padding: 1rem 1.1rem;
-      }
-
-      /* Smaller desktops / tablets */
-      @media (max-width: 1024px) {
         #certifications .certs-grid {
-          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          grid-template-columns: 1fr;
           gap: 1rem;
-          max-width: 900px;
         }
 
         #certifications .cert-card {
-          max-width: 300px;
+          width: 92%;
+          max-width: 330px;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 14px;
         }
 
         #certifications .cert-img {
-          height: 155px;
-          padding: 0.65rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 145px;
+          padding: 0.55rem;
+          overflow: hidden;
+          background: var(--bg3);
+        }
+
+        #certifications .cert-img img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          max-width: 100%;
+          object-fit: contain;
         }
 
         #certifications .cert-body {
           padding: 0.9rem 1rem;
         }
 
-        #academic-journey .viewable-img {
-          width: 92%;
-          max-width: 560px;
-          margin: 0 auto;
-          display: block;
-        }
-      }
-
-      /* Tablets */
-      @media (max-width: 768px) {
-        #certifications .certs-grid {
-          grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-          gap: 0.9rem;
-        }
-
-        #certifications .cert-card {
-          max-width: 280px;
-          border-radius: 15px;
-        }
-
-        #certifications .cert-img {
-          height: 140px;
-          padding: 0.55rem;
-        }
-
-        #certifications .cert-body {
-          padding: 0.82rem 0.9rem;
-        }
-
         #certifications .cert-name {
           font-size: 0.88rem;
+          line-height: 1.35;
         }
 
-        #certifications .cert-date,
+        #certifications .cert-issuer {
+          font-size: 10px;
+        }
+
+        #certifications .cert-date {
+          font-size: 10.5px;
+        }
+
+        #certifications .cert-id {
+          font-size: 9px;
+        }
+
+        #certifications .tag {
+          font-size: 9px;
+          padding: 0.18rem 0.45rem;
+        }
+
         #certifications .cert-cred {
-          font-size: 11px;
+          font-size: 10.5px;
         }
 
-        #academic-journey .year-block {
-          padding: 1.25rem;
-        }
-
-        #academic-journey .edu-table {
-          font-size: 0.8rem;
-        }
-
-        #academic-journey .edu-table th,
-        #academic-journey .edu-table td {
-          padding: 9px 8px;
-        }
-
-        #academic-journey .viewable-img {
-          width: 88%;
-          max-width: 440px;
-        }
-      }
-
-      /* Large phones / small tablets */
-      @media (max-width: 600px) {
-        #certifications .certs-grid {
-          grid-template-columns: 1fr;
-          gap: 0.85rem;
-        }
-
-        #certifications .cert-card {
-          width: 90%;
-          max-width: 310px;
-          margin: 0 auto;
-        }
-
-        #certifications .cert-img {
-          height: 130px;
-          padding: 0.5rem;
-        }
-
-        #certifications .cert-body {
-          padding: 0.78rem 0.85rem;
-        }
+        /* =====================================================
+           ACADEMIC JOURNEY - MOBILE ONLY
+        ===================================================== */
 
         #academic-journey .timeline {
-          gap: 1.15rem;
+          gap: 1.1rem;
         }
 
         #academic-journey .year-block {
-          width: 97%;
-          margin: 0 auto 1rem;
+          width: 96%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 1rem;
           padding: 1rem;
+          border-radius: 14px;
+          border-left-width: 3px;
+        }
+
+        #academic-journey .year-header {
+          margin-bottom: 0.9rem;
+          gap: 0.5rem;
+        }
+
+        #academic-journey .year-header h3 {
+          font-size: 0.92rem;
+        }
+
+        #academic-journey .status-pill {
+          padding: 4px 9px;
+          font-size: 0.58rem;
+          white-space: nowrap;
+        }
+
+        #academic-journey .edu-table-container {
+          margin-bottom: 0.8rem;
         }
 
         #academic-journey .edu-table {
           font-size: 0.72rem;
+          line-height: 1.35;
         }
 
         #academic-journey .edu-table th,
@@ -187,34 +151,50 @@
           padding: 7px 6px;
         }
 
+        #academic-journey .edu-image-box {
+          margin-top: 0.6rem;
+          padding-top: 0.8rem;
+        }
+
         #academic-journey .viewable-img {
-          width: 86%;
-          max-width: 340px;
-          max-height: 210px;
+          display: block;
+          width: 84%;
+          max-width: 320px;
+          max-height: 195px;
           object-fit: contain;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 9px;
+        }
+
+        #academic-journey .img-hint {
+          margin-top: 0.45rem;
+          font-size: 9px;
         }
       }
 
-      /* Phones */
       @media (max-width: 480px) {
-        #certifications .sec-line,
-        #academic-journey .sec-line {
-          margin-bottom: 1.5rem;
+        /* =====================================================
+           CERTIFICATIONS - SMALL PHONES
+        ===================================================== */
+
+        #certifications .certs-grid {
+          gap: 0.85rem;
         }
 
         #certifications .cert-card {
-          width: 88%;
+          width: 90%;
           max-width: 290px;
-          border-radius: 13px;
+          border-radius: 12px;
         }
 
         #certifications .cert-img {
-          height: 115px;
+          height: 120px;
           padding: 0.4rem;
         }
 
         #certifications .cert-body {
-          padding: 0.7rem 0.78rem;
+          padding: 0.72rem 0.82rem;
         }
 
         #certifications .cert-issuer {
@@ -223,24 +203,23 @@
         }
 
         #certifications .cert-name {
-          font-size: 0.78rem;
-          line-height: 1.3;
+          font-size: 0.79rem;
           margin-bottom: 0.2rem;
         }
 
         #certifications .cert-date {
           font-size: 9.5px;
-          margin-bottom: 0.25rem;
+          margin-bottom: 0.3rem;
         }
 
         #certifications .cert-id {
           font-size: 8px;
-          margin-bottom: 0.45rem;
           padding: 0.12rem 0.35rem;
+          margin-bottom: 0.5rem;
         }
 
         #certifications .tags {
-          gap: 0.2rem;
+          gap: 0.22rem;
         }
 
         #certifications .tag {
@@ -252,39 +231,32 @@
           font-size: 9.5px;
         }
 
-        #academic-journey .timeline {
-          gap: 1rem;
-        }
+        /* =====================================================
+           ACADEMIC JOURNEY - SMALL PHONES
+        ===================================================== */
 
         #academic-journey .year-block {
           width: 96%;
-          margin: 0 auto 0.9rem;
-          padding: 0.85rem;
-          border-radius: 12px;
-          border-left-width: 3px;
+          padding: 0.8rem;
+          margin-bottom: 0.75rem;
+          border-radius: 11px;
         }
 
         #academic-journey .year-header {
           margin-bottom: 0.65rem;
-          gap: 0.4rem;
         }
 
         #academic-journey .year-header h3 {
-          font-size: 0.84rem;
+          font-size: 0.82rem;
         }
 
         #academic-journey .status-pill {
           padding: 3px 7px;
           font-size: 0.52rem;
-          white-space: nowrap;
-        }
-
-        #academic-journey .edu-table-container {
-          margin-bottom: 0.6rem;
         }
 
         #academic-journey .edu-table {
-          font-size: 0.65rem;
+          font-size: 0.64rem;
           line-height: 1.3;
         }
 
@@ -299,54 +271,15 @@
         }
 
         #academic-journey .viewable-img {
-          display: block;
           width: 82%;
           max-width: 275px;
           max-height: 165px;
-          object-fit: contain;
-          margin: 0 auto;
           border-radius: 8px;
         }
 
         #academic-journey .img-hint {
           margin-top: 0.3rem;
           font-size: 8px;
-        }
-      }
-
-      /* Very small phones */
-      @media (max-width: 360px) {
-        #certifications .cert-card {
-          width: 92%;
-          max-width: 265px;
-        }
-
-        #certifications .cert-img {
-          height: 100px;
-          padding: 0.35rem;
-        }
-
-        #certifications .cert-body {
-          padding: 0.62rem 0.7rem;
-        }
-
-        #academic-journey .year-block {
-          padding: 0.72rem;
-        }
-
-        #academic-journey .edu-table {
-          font-size: 0.61rem;
-        }
-
-        #academic-journey .edu-table th,
-        #academic-journey .edu-table td {
-          padding: 4px 3px;
-        }
-
-        #academic-journey .viewable-img {
-          width: 80%;
-          max-width: 245px;
-          max-height: 145px;
         }
       }
     </style>
@@ -418,12 +351,7 @@
       <div class="hero-inner">
         <div class="hero-text">
           <p class="hero-greeting">Hello, World!</p>
-
-          <h1 class="hero-name">
-            I'm Syabonga<br />
-            Njabulo Duma
-          </h1>
-
+          <h1 class="hero-name">I'm Syabonga<br />Njabulo Duma</h1>
           <p class="hero-role">Software Developer</p>
 
           <p class="hero-sub">
@@ -495,58 +423,57 @@
 
           <div class="info-box reveal">
             <div class="info-row">
-              <span class="lbl">Name</span>
-              <span class="val">Syabonga Njabulo Duma</span>
+              <span class="lbl">Name</span
+              ><span class="val">Syabonga Njabulo Duma</span>
             </div>
 
             <div class="info-row">
-              <span class="lbl">Location</span>
-              <span class="val">Port Elizabeth, Eastern Cape</span>
+              <span class="lbl">Location</span
+              ><span class="val">Port Elizabeth, Eastern Cape</span>
             </div>
 
             <div class="info-row">
-              <span class="lbl">Status</span>
-              <span class="val">Open to opportunities</span>
+              <span class="lbl">Status</span
+              ><span class="val">Open to opportunities</span>
             </div>
 
             <div class="info-row">
-              <span class="lbl">Education</span>
-              <span class="val">Diploma IT - Software Dev</span>
+              <span class="lbl">Education</span
+              ><span class="val">Diploma IT - Software Dev</span>
             </div>
 
             <div class="info-row">
-              <span class="lbl">Institute</span>
-              <span class="val">Nelson Mandela University</span>
+              <span class="lbl">Institute</span
+              ><span class="val">Nelson Mandela University</span>
             </div>
 
             <div class="info-row">
-              <span class="lbl">Duration</span>
-              <span class="val">Feb 2024 - Nov 2026 (Expected)</span>
+              <span class="lbl">Duration</span
+              ><span class="val">Feb 2024 - Nov 2026 (Expected)</span>
             </div>
 
             <div class="info-row">
-              <span class="lbl">Experience</span>
-              <span class="val">Student Projects</span>
+              <span class="lbl">Experience</span
+              ><span class="val">Student Projects</span>
             </div>
 
             <div class="info-row">
-              <span class="lbl">Languages</span>
-              <span class="val">English · Zulu · Xhosa</span>
+              <span class="lbl">Languages</span
+              ><span class="val">English · Zulu · Xhosa</span>
             </div>
 
             <div class="info-row">
-              <span class="lbl">Email</span>
-
-              <span class="val">
-                <a href="mailto:njabulod189@gmail.com">
-                  njabulod189@gmail.com
-                </a>
-              </span>
+              <span class="lbl">Email</span
+              ><span class="val"
+                ><a href="mailto:njabulod189@gmail.com"
+                  >njabulod189@gmail.com</a
+                ></span
+              >
             </div>
 
             <div class="info-row">
-              <span class="lbl">Phone</span>
-              <span class="val">+27 72 434 7162</span>
+              <span class="lbl">Phone</span
+              ><span class="val">+27 72 434 7162</span>
             </div>
           </div>
         </div>
@@ -567,21 +494,15 @@
           style="max-width: 700px; margin: 0 auto"
         >
           <div class="cert-img">
-            <i
-              class="fas fa-graduation-cap"
-              style="font-size: 3rem"
-            ></i>
+            <i class="fas fa-graduation-cap" style="font-size: 3rem"></i>
           </div>
 
           <div class="cert-body">
             <p class="cert-issuer">
-              <i class="fas fa-university"></i>
-              Nelson Mandela University
+              <i class="fas fa-university"></i> Nelson Mandela University
             </p>
 
-            <h3 class="cert-name">
-              Diploma in Information Technology
-            </h3>
+            <h3 class="cert-name">Diploma in Information Technology</h3>
 
             <p class="cert-date">
               2024 – 2027 (Expected Graduation)
@@ -592,20 +513,16 @@
             </p>
 
             <div class="tags" style="margin-bottom: 0.8rem">
-              <span class="tag">Software Development</span>
-              <span class="tag">C# / .NET</span>
-              <span class="tag">React</span>
-              <span class="tag">Databases</span>
-              <span class="tag">Networking</span>
+              <span class="tag">Software Development</span
+              ><span class="tag">C# / .NET</span
+              ><span class="tag">React</span
+              ><span class="tag">Databases</span
+              ><span class="tag">Networking</span>
             </div>
 
-            <a
-              class="cert-cred"
-              href="#academic-journey"
+            <a class="cert-cred" href="#academic-journey"
+              ><i class="fas fa-list"></i> View Full Academic Record</a
             >
-              <i class="fas fa-list"></i>
-              View Full Academic Record
-            </a>
           </div>
         </div>
       </div>
@@ -633,22 +550,20 @@
             </p>
 
             <div class="tags">
-              <span class="tag">C# / .NET Framework Core</span>
-              <span class="tag">ASP.NET Core</span>
-              <span class="tag">SignalR</span>
-              <span class="tag">Google Maps API</span>
-              <span class="tag">Python</span>
-              <span class="tag">MS SQL Server</span>
+              <span class="tag">C# / .NET Framework Core</span
+              ><span class="tag">ASP.NET Core</span
+              ><span class="tag">SignalR</span
+              ><span class="tag">Google Maps API</span
+              ><span class="tag">Python</span
+              ><span class="tag">MS SQL Server</span>
             </div>
 
             <a
               class="proj-link"
               href="https://github.com/Syabonga-dev/CivicAlert"
               target="_blank"
+              ><i class="fab fa-github"></i> View on GitHub</a
             >
-              <i class="fab fa-github"></i>
-              View on GitHub
-            </a>
           </div>
 
           <div class="proj-card reveal">
@@ -664,21 +579,19 @@
             </p>
 
             <div class="tags">
-              <span class="tag">C# / .NET Framework</span>
-              <span class="tag">React</span>
-              <span class="tag">Entity Framework Core</span>
-              <span class="tag">MS SQL Server</span>
-              <span class="tag">JavaScript</span>
+              <span class="tag">C# / .NET Framework</span
+              ><span class="tag">React</span
+              ><span class="tag">Entity Framework Core</span
+              ><span class="tag">MS SQL Server</span
+              ><span class="tag">JavaScript</span>
             </div>
 
             <a
               class="proj-link"
               href="https://github.com/Syabonga-dev/Case-Management-System-ASP.NEt-Core-Web-APIs-"
               target="_blank"
+              ><i class="fab fa-github"></i> View on GitHub</a
             >
-              <i class="fab fa-github"></i>
-              View on GitHub
-            </a>
           </div>
 
           <div class="proj-card reveal">
@@ -693,22 +606,20 @@
             </p>
 
             <div class="tags">
-              <span class="tag">React</span>
-              <span class="tag">ASP.NET Web API</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">Python</span>
-              <span class="tag">CSS</span>
+              <span class="tag">React</span
+              ><span class="tag">ASP.NET Web API</span
+              ><span class="tag">Node.js</span
+              ><span class="tag">JavaScript</span
+              ><span class="tag">Python</span
+              ><span class="tag">CSS</span>
             </div>
 
             <a
               class="proj-link"
               href="https://github.com/Syabonga-dev/PhilaLink"
               target="_blank"
+              ><i class="fab fa-github"></i> View on GitHub</a
             >
-              <i class="fab fa-github"></i>
-              View on GitHub
-            </a>
 
             <a
               class="proj-link"
@@ -716,8 +627,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i class="fas fa-external-link-alt"></i>
-              Live Site
+              <i class="fas fa-external-link-alt"></i> Live Site
             </a>
 
             <a
@@ -756,11 +666,11 @@
             </p>
 
             <div class="tags">
-              <span class="tag">HTML5</span>
-              <span class="tag">CSS3</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">EmailJS</span>
-              <span class="tag">Responsive Design</span>
+              <span class="tag">HTML5</span
+              ><span class="tag">CSS3</span
+              ><span class="tag">JavaScript</span
+              ><span class="tag">EmailJS</span
+              ><span class="tag">Responsive Design</span>
             </div>
 
             <div
@@ -775,19 +685,15 @@
                 class="proj-link"
                 href="https://github.com/Syabonga-dev/Cybersavvy"
                 target="_blank"
+                ><i class="fab fa-github"></i> View on GitHub</a
               >
-                <i class="fab fa-github"></i>
-                View on GitHub
-              </a>
 
               <a
                 class="proj-link"
                 href="https://cybersavvy-lyart.vercel.app"
                 target="_blank"
+                ><i class="fas fa-external-link-alt"></i> Live Site</a
               >
-                <i class="fas fa-external-link-alt"></i>
-                Live Site
-              </a>
             </div>
           </div>
 
@@ -802,8 +708,8 @@
             </p>
 
             <div class="tags">
-              <span class="tag">React.js</span>
-              <span class="tag">CSS</span>
+              <span class="tag">React.js</span
+              ><span class="tag">CSS</span>
               <span class="tag">JavaScript</span>
               <span class="tag">Asp.Net Core</span>
               <span class="tag">Responsive Design</span>
@@ -822,10 +728,8 @@
                 class="proj-link"
                 href="https://github.com/Syabonga-dev/FixMyTown_Backend"
                 target="_blank"
+                ><i class="fab fa-github"></i> View on GitHub</a
               >
-                <i class="fab fa-github"></i>
-                View on GitHub
-              </a>
             </div>
           </div>
         </div>
@@ -1018,10 +922,7 @@
                   class="philalink-carousel__slide"
                   data-caption="My uncle"
                 >
-                  <img
-                    src="./photo2.jpg"
-                    alt="My uncle"
-                  />
+                  <img src="./photo2.jpg" alt="My uncle" />
                 </figure>
 
                 <figure
@@ -1096,10 +997,7 @@
             </button>
           </div>
 
-          <div
-            class="philalink-carousel__counter"
-            aria-live="polite"
-          >
+          <div class="philalink-carousel__counter" aria-live="polite">
             <span id="philalinkPhotoCurrent">1</span>
             <span>/</span>
             <span id="philalinkPhotoTotal">8</span>
@@ -1120,66 +1018,792 @@
         <div class="skills-grid">
           <div class="sk-group reveal">
             <p class="sk-title">
-              <i class="fas fa-code"></i>
-              Languages
+              <i class="fas fa-code"></i> Languages
             </p>
 
             <div class="sk-chips">
-              <span class="chip hi">C#</span>
-              <span class="chip hi">Python</span>
-              <span class="chip hi">JavaScript</span>
-              <span class="chip">HTML5</span>
-              <span class="chip">CSS</span>
-              <span class="chip">SQL</span>
-              <span class="chip">JSON</span>
-              <span class="chip">jQuery</span>
+              <span class="chip hi">C#</span
+              ><span class="chip hi">Python</span
+              ><span class="chip hi">JavaScript</span
+              ><span class="chip">HTML5</span
+              ><span class="chip">CSS</span
+              ><span class="chip">SQL</span
+              ><span class="chip">JSON</span
+              ><span class="chip">jQuery</span>
             </div>
           </div>
 
           <div class="sk-group reveal">
             <p class="sk-title">
-              <i class="fas fa-layer-group"></i>
-              Frameworks
+              <i class="fas fa-layer-group"></i> Frameworks
             </p>
 
             <div class="sk-chips">
-              <span class="chip hi">.NET Framework</span>
-              <span class="chip hi">ASP.NET MVC</span>
-              <span class="chip hi">ASP.NET Web API</span>
-              <span class="chip hi">React.js</span>
-              <span class="chip">Node.js</span>
-              <span class="chip">Bootstrap</span>
-              <span class="chip">Entity Framework Core</span>
-              <span class="chip">SignalR</span>
+              <span class="chip hi">.NET Framework</span
+              ><span class="chip hi">ASP.NET MVC</span
+              ><span class="chip hi">ASP.NET Web API</span
+              ><span class="chip hi">React.js</span
+              ><span class="chip">Node.js</span
+              ><span class="chip">Bootstrap</span
+              ><span class="chip">Entity Framework Core</span
+              ><span class="chip">SignalR</span>
             </div>
           </div>
 
           <div class="sk-group reveal">
             <p class="sk-title">
-              <i class="fas fa-sitemap"></i>
-              Architecture &amp; APIs
+              <i class="fas fa-sitemap"></i> Architecture &amp; APIs
             </p>
 
             <div class="sk-chips">
-              <span class="chip hi">3-Tier Architecture</span>
-              <span class="chip hi">MVC Pattern</span>
-              <span class="chip hi">OOP</span>
-              <span class="chip">Google Maps API</span>
-              <span class="chip">Open Weather API</span>
-              <span class="chip">REST APIs</span>
+              <span class="chip hi">3-Tier Architecture</span
+              ><span class="chip hi">MVC Pattern</span
+              ><span class="chip hi">OOP</span
+              ><span class="chip">Google Maps API</span
+              ><span class="chip">Open Weather API</span
+              ><span class="chip">REST APIs</span>
             </div>
           </div>
 
           <div class="sk-group reveal">
             <p class="sk-title">
-              <i class="fas fa-database"></i>
-              Databases &amp; Tools
+              <i class="fas fa-database"></i> Databases &amp; Tools
             </p>
 
             <div class="sk-chips">
-              <span class="chip hi">SQL Server</span>
-              <span class="chip">Microsoft Access</span>
-              <span class="chip">MS Excel</span>
-              <span class="chip">Microsoft Word</span>
-              <span class="chip">PowerPoint</span>
-              <span class="chip">Microsoft Office</span>
+              <span class="chip hi">SQL Server</span
+              ><span class="chip">Microsoft Access</span
+              ><span class="chip">MS Excel</span
+              ><span class="chip">Microsoft Word</span
+              ><span class="chip">PowerPoint</span
+              ><span class="chip">Microsoft Office</span>
+            </div>
+          </div>
+
+          <div class="sk-group reveal">
+            <p class="sk-title">
+              <i class="fas fa-shield-alt"></i> Cybersecurity &amp; Networking
+            </p>
+
+            <div class="sk-chips">
+              <span class="chip hi">Cybersecurity</span
+              ><span class="chip">Threat Detection</span
+              ><span class="chip">Cyber Best Practices</span
+              ><span class="chip">Network Security</span
+              ><span class="chip">Network Vulnerabilities</span
+              ><span class="chip">IPv4 / IPv6</span
+              ><span class="chip">IP Subnetting</span
+              ><span class="chip">Packet Switching</span
+              ><span class="chip">Ethernet</span
+              ><span class="chip">IP Connectivity</span>
+            </div>
+          </div>
+
+          <div class="sk-group reveal">
+            <p class="sk-title">
+              <i class="fas fa-users"></i> Soft Skills
+            </p>
+
+            <div class="sk-chips">
+              <span class="chip">Teamwork</span
+              ><span class="chip">Communication</span
+              ><span class="chip">Presentations</span
+              ><span class="chip">Strategy</span
+              ><span class="chip">English</span
+              ><span class="chip">Zulu</span
+              ><span class="chip">Xhosa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" style="background: var(--bg2)">
+      <div class="sec">
+        <div class="reveal">
+          <p class="sec-tag">Credentials</p>
+          <h2 class="sec-title">Certifications</h2>
+          <div class="sec-line"></div>
+        </div>
+
+        <div class="certs-grid">
+          <div class="cert-card reveal">
+            <div class="cert-img">
+              <img
+                src="networks.png"
+                alt="an image of my networks certificate"
+              />
+            </div>
+
+            <div class="cert-body">
+              <p class="cert-issuer">
+                <i class="fas fa-award"></i> Cisco Networking Academy
+              </p>
+
+              <h3 class="cert-name">
+                CCNA: Introduction to Networks
+              </h3>
+
+              <p class="cert-date">
+                Issued May 2025
+              </p>
+
+              <p class="cert-id">
+                ID: edeec0f9-6276-41de-af9a-3a6d23db2e3f
+              </p>
+
+              <div class="tags" style="margin-bottom: 0.8rem">
+                <span class="tag">Ethernet</span
+                ><span class="tag">IP Connectivity</span
+                ><span class="tag">IPv4/IPv6</span
+                ><span class="tag">IP Subnetting</span
+                ><span class="tag">Network Security</span
+                ><span class="tag">Packet Switching</span>
+              </div>
+
+              <a
+                class="cert-cred"
+                href="https://www.credly.com/badges/edeec0f9-6276-41de-af9a-3a6d23db2e3f/public_url"
+                target="_blank"
+                ><i class="fas fa-external-link-alt"></i> Show Credential</a
+              >
+            </div>
+          </div>
+
+          <div class="cert-card reveal">
+            <div class="cert-img">
+              <img
+                src="cybersecurity.png"
+                alt="an image of a cybersecurity certificate"
+              />
+
+              <i class="fas fa-certificate"></i>
+            </div>
+
+            <div class="cert-body">
+              <p class="cert-issuer">
+                <i class="fas fa-award"></i> Cisco Networking Academy
+              </p>
+
+              <h3 class="cert-name">
+                Introduction to Cybersecurity
+              </h3>
+
+              <p class="cert-date">
+                Issued Apr 2024
+              </p>
+
+              <p class="cert-id">
+                ID: 1059461122
+              </p>
+
+              <div class="tags" style="margin-bottom: 0.8rem">
+                <span class="tag">Cybersecurity</span
+                ><span class="tag">Cyber Best Practices</span
+                ><span class="tag">Threat Detection</span
+                ><span class="tag">Network Vulnerabilities</span
+                ><span class="tag">Privacy &amp; Data</span>
+              </div>
+
+              <a
+                class="cert-cred"
+                href="https://www.credly.com/badges/92e08d8e-4b59-4ea3-953d-b554a284fdd5/public_url"
+                target="_blank"
+                ><i class="fas fa-external-link-alt"></i> Show Credential</a
+              >
+            </div>
+          </div>
+
+          <!-- NEW CODEWRKX CERTIFICATE -->
+          <div class="cert-card reveal">
+            <div class="cert-img">
+              <img
+                src="Codewrkx-Certificate-CWX-2026-053390.png"
+                alt="an image of my Codewrkx certificate"
+              />
+            </div>
+
+            <div class="cert-body">
+              <p class="cert-issuer">
+                <i class="fas fa-award"></i> Codewrkx
+              </p>
+
+              <h3 class="cert-name">
+                Codewrkx Certificate
+              </h3>
+
+              <p class="cert-date">
+                Issued 2026
+              </p>
+
+              <p class="cert-id">
+                ID: CWX-2026-053390
+              </p>
+
+              <a
+                class="cert-cred"
+                href="Codewrkx-Certificate-CWX-2026-053390.png"
+                target="_blank"
+              >
+                <i class="fas fa-external-link-alt"></i> View Certificate
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACADEMIC JOURNEY -->
+    <section id="academic-journey" style="background: var(--bg2)">
+      <div class="sec">
+        <div class="reveal">
+          <p class="sec-tag">Academic History</p>
+          <h2 class="sec-title">University Journey</h2>
+          <div class="sec-line"></div>
+        </div>
+
+        <div class="timeline">
+          <!-- 2024: First Year -->
+          <div class="year-block reveal">
+            <div class="year-header">
+              <h3>First Year (2024)</h3>
+              <span class="status-pill complete">Complete</span>
+            </div>
+
+            <div class="edu-content-grid">
+              <div class="edu-table-container">
+                <table class="edu-table">
+                  <thead>
+                    <tr>
+                      <th>Module</th>
+                      <th>Mark</th>
+                      <th>Result</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>Systems Software I: IT Essentials</td>
+                      <td>81%</td>
+                      <td class="dist">Pass with Distinction</td>
+                    </tr>
+
+                    <tr>
+                      <td>IT Skills I</td>
+                      <td>80%</td>
+                      <td class="dist">Pass with Distinction</td>
+                    </tr>
+
+                    <tr>
+                      <td>Development Software I</td>
+                      <td>78%</td>
+                      <td class="dist">Pass with Distinction</td>
+                    </tr>
+
+                    <tr>
+                      <td>Systems Software I: Networks</td>
+                      <td>86%</td>
+                      <td class="dist">Pass with Distinction</td>
+                    </tr>
+
+                    <tr>
+                      <td>Information Systems 1A</td>
+                      <td>75%</td>
+                      <td class="dist">Pass with Distinction</td>
+                    </tr>
+
+                    <tr>
+                      <td>Information Systems 1B</td>
+                      <td>71%</td>
+                      <td>Pass</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="edu-image-box">
+                <img
+                  src="First year acad.jpg"
+                  alt="First Year Academic Record"
+                  class="viewable-img"
+                />
+
+                <p class="img-hint">
+                  Click to enlarge
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2025: Second Year -->
+          <div class="year-block reveal">
+            <div class="year-header">
+              <h3>Second Year (2025)</h3>
+              <span class="status-pill complete">Complete</span>
+            </div>
+
+            <div class="edu-content-grid">
+              <div class="edu-table-container">
+                <table class="edu-table">
+                  <thead>
+                    <tr>
+                      <th>Module</th>
+                      <th>Mark</th>
+                      <th>Result</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>Internet Programming II</td>
+                      <td>84%</td>
+                      <td class="dist">Pass with Distinction</td>
+                    </tr>
+
+                    <tr>
+                      <td>Development Software II</td>
+                      <td>90%</td>
+                      <td class="dist">Pass with Distinction</td>
+                    </tr>
+
+                    <tr>
+                      <td>Technical Programming I</td>
+                      <td>64%</td>
+                      <td>Pass</td>
+                    </tr>
+
+                    <tr>
+                      <td>Information Systems II</td>
+                      <td>68%</td>
+                      <td>Pass</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="edu-image-box">
+                <img
+                  src="Second year acad.jpg"
+                  alt="Second Year Academic Record"
+                  class="viewable-img"
+                />
+
+                <p class="img-hint">
+                  Click to enlarge
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2026: Final Year-->
+          <div class="year-block reveal">
+            <div class="year-header">
+              <h3>Final Year (2026)</h3>
+              <span class="status-pill progress">In-Progress</span>
+            </div>
+
+            <div class="edu-content-grid">
+              <div class="edu-table-container">
+                <table class="edu-table">
+                  <thead>
+                    <tr>
+                      <th>Module</th>
+                      <th>Mark</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>Development Software III: C#</td>
+                      <td>90%</td>
+                      <td class="dist">Pass with Distinction</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        Information Systems III: Project Best Practice
+                      </td>
+
+                      <td>68%</td>
+                      <td>Pass</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        Information Systems III: Systems Analysis &amp; Design
+                      </td>
+
+                      <td>66%</td>
+                      <td>Pass</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        Information Systems III: Advanced Design
+                      </td>
+
+                      <td>--</td>
+                      <td>In-Progress</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        Development Software III: Project
+                      </td>
+
+                      <td>--</td>
+                      <td>In-Progress</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        Technical Programming II
+                      </td>
+
+                      <td>--</td>
+                      <td>In-Progress</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        Support Services II
+                      </td>
+
+                      <td>--</td>
+                      <td>In-Progress</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="edu-image-box">
+                <img
+                  src="Final year acad.jpg"
+                  alt="Final Year Academic Record"
+                  class="viewable-img"
+                />
+
+                <p class="img-hint">
+                  Click to enlarge
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for Image Viewing -->
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="imgFull" />
+    </div>
+
+    <!-- CONTACT -->
+    <section id="contact" style="background: var(--bg)">
+      <div class="sec">
+        <div class="reveal">
+          <p class="sec-tag">
+            Get In Touch
+          </p>
+
+          <h2 class="sec-title">
+            Let's Connect
+          </h2>
+
+          <div class="sec-line"></div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="c-items reveal">
+            <div class="c-item">
+              <div class="c-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+
+              <div>
+                <p class="c-lbl">
+                  Email
+                </p>
+
+                <p class="c-val">
+                  <a href="mailto:njabulod189@gmail.com"
+                    >njabulod189@gmail.com</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <div class="c-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+
+              <div>
+                <p class="c-lbl">
+                  Phone
+                </p>
+
+                <p class="c-val">
+                  <a href="tel:+27724347162">
+                    +27 72 434 7162
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <div class="c-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+
+              <div>
+                <p class="c-lbl">
+                  LinkedIn
+                </p>
+
+                <p class="c-val">
+                  <a
+                    href="https://www.linkedin.com/in/syabonga-njabulo-duma-398756329"
+                    target="_blank"
+                    >Syabonga Njabulo Duma</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <div class="c-icon">
+                <i class="fab fa-github"></i>
+              </div>
+
+              <div>
+                <p class="c-lbl">
+                  GitHub
+                </p>
+
+                <p class="c-val">
+                  <a
+                    href="https://github.com/Syabonga-dev"
+                    target="_blank"
+                    >Syabonga-dev</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <div class="c-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+
+              <div>
+                <p class="c-lbl">
+                  Location
+                </p>
+
+                <p class="c-val">
+                  Port Elizabeth, Eastern Cape, ZA
+                </p>
+              </div>
+            </div>
+
+            <a
+              class="btn btn-primary"
+              href="Syabonga_Duma_CV.pdf"
+              download
+              style="align-self: flex-start; margin-top: 0.25rem"
+              ><i class="fas fa-download"></i> Download CV</a
+            >
+          </div>
+
+          <form class="cf reveal" onsubmit="return false;">
+            <div class="cf-row">
+              <div class="cf-field">
+                <label class="cf-lbl" for="cn">
+                  Name
+                </label>
+
+                <input
+                  class="cf-input"
+                  type="text"
+                  id="cn"
+                  placeholder="Your name"
+                />
+              </div>
+
+              <div class="cf-field">
+                <label class="cf-lbl" for="ce">
+                  Email
+                </label>
+
+                <input
+                  class="cf-input"
+                  type="email"
+                  id="ce"
+                  placeholder="your@email.com"
+                />
+              </div>
+            </div>
+
+            <div class="cf-field">
+              <label class="cf-lbl" for="cs">
+                Subject
+              </label>
+
+              <input
+                class="cf-input"
+                type="text"
+                id="cs"
+                placeholder="What's this about?"
+              />
+            </div>
+
+            <div class="cf-field">
+              <label class="cf-lbl" for="cm">
+                Message
+              </label>
+
+              <textarea
+                class="cf-ta"
+                id="cm"
+                placeholder="Tell me about the opportunity..."
+              ></textarea>
+            </div>
+
+            <button
+              class="btn btn-primary"
+              type="submit"
+              style="align-self: flex-start"
+              onclick="sendmail()"
+            >
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <span class="f-copy">
+        © <span id="date-year"></span> Syabonga Njabulo Duma · Software Developer
+      </span>
+
+      <div class="f-links">
+        <a
+          href="https://github.com/Syabonga-dev"
+          target="_blank"
+        >
+          <i class="fab fa-github"></i> GitHub
+        </a>
+
+        <ahref="https://www.linkedin.com/in/syabonga-njabulo-duma-398756329"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin-in"></i> LinkedIn
+        </a>
+
+        <a href="#hero">
+          <i class="fas fa-arrow-up"></i> Back to top
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      const dateElem = document.getElementById("date-year");
+      const date = new Date();
+      const year = date.getFullYear();
+      dateElem.textContent = year;
+
+      const btn = document.getElementById("themeToggle");
+      const html = document.documentElement;
+
+      // load saved theme
+      const savedTheme = localStorage.getItem("theme") || "light";
+      html.setAttribute("data-theme", savedTheme);
+
+      // toggle theme
+      btn.addEventListener("click", () => {
+        const next =
+          html.getAttribute("data-theme") === "light" ? "dark" : "light";
+
+        html.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+      });
+
+      // update label text
+
+      const obs = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          }),
+        { threshold: 0.1 },
+      );
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => obs.observe(el));
+
+      const modal =
+        document.getElementById("imageModal");
+
+      const modalImg =
+        document.getElementById("imgFull");
+
+      const span =
+        document.getElementsByClassName("close")[0];
+
+      // Select all images with the viewable-img class
+      document
+        .querySelectorAll(".viewable-img")
+        .forEach((image) => {
+          image.onclick = function () {
+            modal.style.display =
+              "block";
+
+            modalImg.src =
+              this.src;
+          };
+        });
+
+      span.onclick = function () {
+        modal.style.display =
+          "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display =
+            "none";
+        }
+      };
+
+      const menuToggle =
+        document.getElementById("menuToggle");
+
+      const navLinks =
+        document.querySelector(".nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+
+        const icon =
+          menuToggle.querySelector("i");
+
+        if (navLinks.classList.contains("active")) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times");
+        } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+      });
+    </script>
+
+    <script src="philalink-modal.js"></script>
+  </body>
+</html>
