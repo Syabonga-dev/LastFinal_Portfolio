@@ -1,3 +1,4 @@
+
 .philalink-about-btn {
   margin-top: 0.25rem;
   padding: 0;
@@ -135,94 +136,58 @@
 
 /* =========================================================
    TABS
-   Compact sub-navigation rather than large buttons
 ========================================================= */
 
 .philalink-tabs {
-  display: flex;
-  align-items: center;
-  gap: 1.65rem;
+  display: grid;
 
-  padding: 0 1.75rem;
+  grid-template-columns:
+    minmax(180px, 0.7fr)
+    minmax(320px, 1.3fr);
+
+  gap: 0.65rem;
+
+  padding: 0 1.75rem 1rem;
 
   border-bottom: 1px solid var(--border);
-
-  overflow-x: auto;
-  overflow-y: hidden;
-
-  scrollbar-width: none;
-}
-
-.philalink-tabs::-webkit-scrollbar {
-  display: none;
 }
 
 .philalink-tab {
-  position: relative;
+  min-height: 54px;
 
-  flex: 0 0 auto;
+  padding: 0.75rem 1rem;
 
-  min-height: 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
 
-  padding: 0.55rem 0 0.9rem;
-
-  border: 0;
-  border-radius: 0;
-
-  background: transparent;
-  color: var(--ink3);
+  background: var(--bg3);
+  color: var(--ink2);
 
   font-family: "Poppins", sans-serif;
   font-size: 12px;
   font-weight: 600;
 
-  line-height: 1.4;
+  line-height: 1.45;
 
   text-align: left;
-  white-space: nowrap;
 
   cursor: pointer;
 
   transition:
-    color 0.2s ease,
-    opacity 0.2s ease;
-}
-
-.philalink-tab::after {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  right: 0;
-  bottom: -1px;
-
-  height: 2px;
-
-  background: var(--accent);
-
-  transform: scaleX(0);
-  transform-origin: left center;
-
-  transition: transform 0.22s ease;
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .philalink-tab:hover {
+  border-color: var(--accent);
   color: var(--accent);
-}
-
-.philalink-tab:hover::after {
-  transform: scaleX(0.35);
 }
 
 .philalink-tab.active {
-  background: transparent;
-  border: 0;
-  color: var(--accent);
-}
-
-.philalink-tab.active::after {
-  transform: scaleX(1);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
 }
 
 /* =========================================================
@@ -464,20 +429,13 @@ body.philalink-modal-open {
   }
 
   .philalink-tabs {
-    gap: 1.25rem;
+    grid-template-columns: 1fr;
 
-    padding: 0 1.1rem;
+    padding: 0 1.1rem 0.85rem;
   }
 
   .philalink-tab {
-    min-height: 0;
-
-    padding:
-      0.5rem
-      0
-      0.8rem;
-
-    font-size: 11.5px;
+    min-height: auto;
   }
 
   .philalink-tab-panel {
@@ -537,20 +495,10 @@ body.philalink-modal-open {
   }
 
   .philalink-tabs {
-    gap: 1.1rem;
-
     padding:
       0
-      0.9rem;
-  }
-
-  .philalink-tab {
-    padding:
-      0.45rem
-      0
-      0.75rem;
-
-    font-size: 11px;
+      0.9rem
+      0.8rem;
   }
 
   .philalink-tab-panel {
