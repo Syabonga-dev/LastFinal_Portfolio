@@ -209,6 +209,53 @@
           height: 180px;
         }
       }
+
+      /* Refined About and academic sections */
+      #about .about-grid { display: block; }
+      #about .about-single-paragraph {
+        max-width: 100%;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+      #about .about-single-paragraph p {
+        margin: 0;
+        font-size: clamp(1rem, 1.5vw, 1.15rem);
+        line-height: 1.9;
+      }
+      #education .academic-summary {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0.5rem 0 0.5rem 1.25rem;
+        border-left: 3px solid var(--accent);
+        background: transparent;
+      }
+      #education .academic-summary .cert-name { margin: 0.35rem 0; }
+      #education .academic-summary .cert-issuer,
+      #education .academic-summary .cert-date,
+      #education .academic-summary .cert-id { margin: 0.35rem 0; }
+      #academic-journey .year-block {
+        max-width: 920px;
+        margin: 0 auto 1rem;
+        padding: clamp(0.9rem, 2vw, 1.25rem);
+      }
+      #academic-journey .edu-table th,
+      #academic-journey .edu-table td { padding: 0.55rem 0.7rem; }
+      #certifications .certs-grid { gap: 1.1rem; }
+      #certifications .cert-card { max-width: 360px; margin-inline: auto; }
+      #certifications .cert-img { height: 165px; }
+      #certifications .cert-body { padding: 1rem; }
+      #certifications .cert-name { font-size: 1rem; line-height: 1.45; }
+      #certifications .cert-id { overflow-wrap: anywhere; font-size: 0.82rem; }
+      #certifications .cert-img a { display: block; width: 100%; height: 100%; }
+      #certifications .cert-img a img { cursor: pointer; }
+      @media (max-width: 700px) {
+        #certifications .cert-card { max-width: 100%; }
+        #certifications .cert-img { height: 150px; }
+      }
+
     </style>
     <link rel="icon" type="image/png" href="icon.png" />
 
@@ -308,71 +355,10 @@
           <h2 class="sec-title">Who Am I?</h2>
           <div class="sec-line"></div>
         </div>
-        <div class="about-grid">
-          <div class="about-text reveal">
-            <p>
-              I'm a final year Diploma in Information Technology (Software
-              Development) student at Nelson Mandela University, passionate
-              about building practical software that solves real-world problems.
-            </p>
-            <p>
-              Over the course of my studies I've built five full systems from
-              the ground up CivicAlert, SAPS CaseVault, PhilaLink, FixMyTown and
-              CyberSavvy applying my skills across the full stack using C#,
-              .NET, React, Python, and more.
-            </p>
-            <p>
-              I'm deeply interested in cybersecurity, networking, and clean
-              architecture. I hold two Cisco certifications and love turning
-              complex problems into elegant, functional solutions.
-            </p>
-          </div>
-          <div class="info-box reveal">
-            <div class="info-row">
-              <span class="lbl">Name</span
-              ><span class="val">Syabonga Njabulo Duma</span>
-            </div>
-            <div class="info-row">
-              <span class="lbl">Location</span
-              ><span class="val">Port Elizabeth, Eastern Cape</span>
-            </div>
-            <div class="info-row">
-              <span class="lbl">Status</span
-              ><span class="val">Open to opportunities</span>
-            </div>
-            <div class="info-row">
-              <span class="lbl">Education</span
-              ><span class="val">Diploma IT - Software Dev</span>
-            </div>
-            <div class="info-row">
-              <span class="lbl">Institute</span
-              ><span class="val">Nelson Mandela University</span>
-            </div>
-            <div class="info-row">
-              <span class="lbl">Duration</span
-              ><span class="val">Feb 2024 - Nov 2026 (Expected)</span>
-            </div>
-            <div class="info-row">
-              <span class="lbl">Experience</span
-              ><span class="val">Student Projects</span>
-            </div>
-            <div class="info-row">
-              <span class="lbl">Languages</span
-              ><span class="val">English · Zulu · Xhosa</span>
-            </div>
-            <div class="info-row">
-              <span class="lbl">Email</span
-              ><span class="val"
-                ><a href="mailto:njabulod189@gmail.com"
-                  >njabulod189@gmail.com</a
-                ></span
-              >
-            </div>
-            <div class="info-row">
-              <span class="lbl">Phone</span
-              ><span class="val">+27 72 434 7162</span>
-            </div>
-          </div>
+        <div class="about-text reveal about-single-paragraph">
+          <p>
+            I'm a final-year Diploma in Information Technology (Software Development) student at Nelson Mandela University, passionate about building practical software that solves real-world problems. Over the course of my studies, I've built five full systems from the ground up — CivicAlert, SAPS CaseVault, PhilaLink, FixMyTown and CyberSavvy — applying full-stack skills using C#, .NET, React, Python and more. I'm deeply interested in cybersecurity, networking and clean architecture. I hold two Cisco certifications and enjoy turning complex problems into elegant, functional solutions.
+          </p>
         </div>
       </div>
     </section>
@@ -385,28 +371,19 @@
           <h2 class="sec-title">Academic Background</h2>
           <div class="sec-line"></div>
         </div>
-        <div class="cert-card reveal" style="max-width: 700px; margin: 0 auto">
-          <div class="cert-img">
-            <i class="fas fa-graduation-cap" style="font-size: 3rem"></i>
+        <div class="academic-summary reveal">
+          <p class="cert-issuer">Nelson Mandela University</p>
+          <h3 class="cert-name">Diploma in Information Technology</h3>
+          <p class="cert-date">2024 – 2027 (Expected Graduation)</p>
+          <p class="cert-id">Final-year student · Major: Software Development</p>
+          <div class="tags" style="margin-bottom: 0.8rem">
+            <span class="tag">Software Development</span>
+            <span class="tag">C# / .NET</span>
+            <span class="tag">React</span>
+            <span class="tag">Databases</span>
+            <span class="tag">Networking</span>
           </div>
-          <div class="cert-body">
-            <p class="cert-issuer">
-              <i class="fas fa-university"></i> Nelson Mandela University
-            </p>
-            <h3 class="cert-name">Diploma in Information Technology</h3>
-            <p class="cert-date">2024 – 2027 (Expected Graduation)</p>
-            <p class="cert-id">Final Year Student · Major: Software Development</p>
-            <div class="tags" style="margin-bottom: 0.8rem">
-              <span class="tag">Software Development</span
-              ><span class="tag">C# / .NET</span
-              ><span class="tag">React</span
-              ><span class="tag">Databases</span
-              ><span class="tag">Networking</span>
-            </div>
-            <a class="cert-cred" href="#academic-journey"
-              ><i class="fas fa-list"></i> View Full Academic Record</a
-            >
-          </div>
+          <a class="cert-cred" href="#academic-journey">View Full Academic Record</a>
         </div>
       </div>
     </section>
@@ -941,10 +918,9 @@
         <div class="certs-grid">
           <div class="cert-card reveal">
             <div class="cert-img">
-              <img
-                src="networks.png"
-                alt="an image of my networks certificate"
-              />
+              <a href="https://www.credly.com/badges/edeec0f9-6276-41de-af9a-3a6d23db2e3f/public_url" target="_blank" rel="noopener noreferrer" aria-label="Open credential for an image of my networks certificate">
+                <img src="networks.png" alt="an image of my networks certificate" />
+              </a>
             </div>
             <div class="cert-body">
               <p class="cert-issuer">
@@ -972,10 +948,9 @@
 
           <div class="cert-card reveal">
             <div class="cert-img">
-              <img
-                src="cybersecurity.png"
-                alt="an image of a cybersecurity certificate"
-              />
+              <a href="https://www.credly.com/badges/92e08d8e-4b59-4ea3-953d-b554a284fdd5/public_url" target="_blank" rel="noopener noreferrer" aria-label="Open credential for an image of a cybersecurity certificate">
+                <img src="cybersecurity.png" alt="an image of a cybersecurity certificate" />
+              </a>
               <i class="fas fa-certificate"></i>
             </div>
             <div class="cert-body">
@@ -1003,11 +978,13 @@
 
           <div class="cert-card reveal">
             <div class="cert-img">
-              <img
-                src="1789737496875.jpg"
-                alt="Introduction to Cloud Engineering (AWS) certificate"
-                loading="lazy"
-              />
+              <a href="https://www.codewrkx.com/" target="_blank" rel="noopener noreferrer" aria-label="Open cloud engineering credential">
+                <img
+                  src="1789737496875.jpg"
+                  alt="Introduction to Cloud Engineering (AWS) certificate"
+                  loading="lazy"
+                />
+              </a>
             </div>
             <div class="cert-body">
               <p class="cert-issuer">
