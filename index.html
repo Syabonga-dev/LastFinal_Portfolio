@@ -256,6 +256,67 @@
         #certifications .cert-img { height: 150px; }
       }
 
+
+      /* Academic layout refinements */
+      #education .academic-summary {
+        max-width: none !important;
+        width: 100%;
+        margin: 0 !important;
+        padding: 0.5rem 0 !important;
+        border-left: 0 !important;
+        border: 0 !important;
+        box-shadow: none !important;
+      }
+
+      #academic-journey .timeline {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: stretch;
+        gap: 1.1rem;
+      }
+
+      #academic-journey .year-block {
+        width: 100%;
+        max-width: none !important;
+        height: 100%;
+        margin: 0 !important;
+        border-left: 0 !important;
+        border-left-width: 0 !important;
+        border-radius: 18px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #academic-journey .edu-content-grid {
+        flex: 1;
+        min-width: 0;
+      }
+
+      #academic-journey .edu-table-container,
+      #academic-journey .edu-image-box {
+        min-width: 0;
+      }
+
+      #academic-journey .edu-image-box img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        cursor: zoom-in;
+      }
+
+      @media (max-width: 900px) {
+        #academic-journey .timeline {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 650px) {
+        #academic-journey .timeline {
+          grid-template-columns: 1fr;
+        }
+      }
+
     </style>
     <link rel="icon" type="image/png" href="icon.png" />
 
