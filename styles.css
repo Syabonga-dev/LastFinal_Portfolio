@@ -363,13 +363,11 @@ nav {
     linear-gradient(var(--hero-overlay), var(--hero-overlay)),
     url("IMG-20220903-WA0106.jpg");
 
-  background-size: cover;
-
+  background-size: contain;
   background-position: center;
-
   background-repeat: no-repeat;
-
-  background-attachment: fixed;
+  background-color: var(--bg);
+  background-attachment: scroll;
 }
 
 .hero-inner {
